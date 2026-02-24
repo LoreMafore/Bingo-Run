@@ -52,6 +52,7 @@ async def bot_commands(ctx):
         "!info - Sends a summary of how Bingo-Run works\n" 
         "!commands - Send a list of all commands and their descriptions \n"
         "!new_game - Starts a new game and sends a dm for configuration"
+        "!help"
     )
 
 #Dm Commands 
@@ -59,6 +60,44 @@ async def bot_commands(ctx):
 @commands.dm_only()
 async def csv(ctx):
     await ctx.send(f"Upload your csv")
+
+@bot.command(name='info')
+@commands.dm_only()
+async def info_dm(ctx):
+    await ctx.send(
+        "In Bingo-Run you make a bingo challenge board. You will give "
+        "me a list of challenges, size of board, and who is playing "
+        "then I will make a board for you. We will need list of "
+        "challenges, a board size, and list of players.\n\n"
+        "To set a list do the following: \n"
+        "!set_list [\"challange1\", \"challenge2\"]\n"
+        "or\n"
+        "!set_list challenge.csv (where you uploaded the csv)\n\n"
+        "To set the size of the board do the following: \n"
+        "!board_size 5 5\n"
+        "This will give you a 5x5 board\n\n"
+        "To set who can play the game and which color they will be assigned to do the following: \n"
+        "!set_players [(\"user_1\", \"blue\"), (\"user_2\", \"red\")]\n"
+        "or\n"
+        "!set_players players.csv (where you uploaded the csv)\n\n"
+        "To see all colors do !colors\n\n"
+        "For any more commands do !commands"
+    )
+
+@bot.command(name='commands')
+@commands.dm_only()
+async def bot_commands_dm(ctx):
+    await ctx.send(
+        "!info - Sends a summary of how Bingo-Run works\n" 
+        "!commands - Send a list of all commands and their descriptions \n"
+        "!set_list args - gives the bot a list of challenges"
+        "!set_list csv - gives the bot a csv with a list lof challenges"
+        "!board_size args - sets the size of the board"
+        "!set_members args - gives the bot a list of players and their colors"
+        "!set_list csv - gives the bot a csv with a list of players and colors"
+        "!example - list an example of different commands"
+        "!help"
+    )
 
 
 @new_game.error 
