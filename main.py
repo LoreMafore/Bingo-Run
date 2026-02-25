@@ -20,6 +20,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f"We are ready to go in, {bot.user.name}")
 
+
 @dataclass
 class BingoRunConfig_c:
     size: list
