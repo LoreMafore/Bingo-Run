@@ -1,9 +1,11 @@
+from email.policy import default
 import discord
 from discord.ext import commands
+from discord import ui
 import logging
 from dotenv import load_dotenv
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
@@ -16,22 +18,52 @@ intents.members = True
 print("Hello world")
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+@dataclass
+class BingoRunConfig_c:
+    size: list = field(default_factory=list)
+    challenge_list: list = field(default_factory=list)
+    member_list: dict = field(default_factory=dict)
+
+SERVER_ID = None
+CHANNEL_ID = None
+bingo_config = BingoRunConfig_c()
+
+class BingoView(ui.View):
+    global CHANNEL_ID
+    def __init__(self, config: BingoRunConfig_c):
+        super().__init__(timeout=None)
+        self.channel = CHANNEL_ID
+
+        total_buttons: int = BingoRunConfig_c.size[0] * BingoRunConfig_c.size[1]
+
+        for i, current_button in enumerate(total_buttons):
+            row = i // BingoRunConfig_c.size[1]  #width
+
+
+
 @bot.event 
 async def on_ready():
     print(f"We are ready to go in, {bot.user.name}")
+    global SERVER_ID, CHANNEL_ID
 
+    guild  = bot.guilds[0]
+    SERVER_ID = guild.id
 
-@dataclass
-class BingoRunConfig_c:
-    size: list
-    challenge_list: list
-    member_list: dict
+    channel = guild.channels[0]
+    CHANNEL_ID = channel.id
+
+    print(f"Server: {guild.name} ({SERVER_ID})")
+    print(f"Channel: {channel.name} ({CHANNEL_ID})")
 
 
 #Server Commands
 @bot.command(name='new_game')
 @commands.guild_only()
 async def new_game(ctx):
+    global CHANNEL_ID
+    CHANNEL_ID = ctx.channel.id
+    print(f"Channel: {ctx.channel.name} ({CHANNEL_ID})")
+
     await ctx.author.send(f"Are you ready to start a new game?")
 
 @bot.command(name='info')
@@ -64,6 +96,7 @@ async def info(ctx):
                 "or\n"
                 "!set_players players.csv (where you uploaded the csv)\n\n"
                 "To see all colors do !colors\n\n"
+                "To start the game enter !start.\n"
                 "For any more commands do !commands"
             )
 
@@ -81,6 +114,7 @@ async def bot_commands(ctx):
     else:
         await ctx.send(
                 "!info - Sends a summary of how Bingo-Run works\n" 
+                "!start - Starts the game if you have entered players, box size and a list of challenges."
                 "!commands - Send a list of all commands and their descriptions \n"
                 "!set_list args - gives the bot a list of challenges"
                 "!set_list csv - gives the bot a csv with a list lof challenges"
