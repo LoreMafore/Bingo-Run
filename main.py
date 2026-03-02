@@ -259,6 +259,37 @@ async def set_board_size(ctx, width: int, height: int):
         print(f"An error occured: {e}")
         return None
 
+
+@bot.command(name='challenges')
+@commands.dm_only()
+async def set_players(ctx, *, data: str):
+    try: 
+        user_id = ctx.author.id
+        
+        if user_id not in USER_CONFIGS:
+            await ctx.send("You don't have an active game. Start one in a server with !new_game")
+            return
+
+        if len(USER_CONFIGS[user_id].size) == 0:
+            await ctx.send("You need to have board size first before configuring the challenges. Set the size of the board with !board_size")
+            return
+
+        # Input format: " challenge1, challenge2"
+        challenge_list: list = [p.strip() for p in data.split(',')]
+        board_size: int = USER_CONFIGS[user_id].size[0] * USER_CONFIGS[user_id].size[1]
+
+        if len(challenge_list) < board_size:
+            await ctx.send(f'You challenge list has {len(challenge_list)} amount of challenges. It needs {board_size} challenges')
+            return 
+
+        USER_CONFIGS[user_id].challenge_list = challenge_list
+        await ctx.send(f"All players set: {USER_CONFIGS[user_id].challenge_list}")
+
+    except Exception as e:
+        print(f"An error occured: {e}")
+        await ctx.send(f"An error occured: {e}")
+
+
 @bot.command(name='players')
 @commands.dm_only()
 async def set_players(ctx, *, data: str):
@@ -270,7 +301,7 @@ async def set_players(ctx, *, data: str):
             return
 
         # Input format: "123456789 red, 987654321 green"
-        players = [p.strip().split() for p in data.split(',')]
+        players: list = [p.strip().split() for p in data.split(',')]
 
         # [[id, color ], [id, color]]
         for i, player_info in enumerate(players):
