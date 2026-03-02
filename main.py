@@ -57,14 +57,15 @@ def change_button_color(style, color: str):
 
 def randomise(challenges: list, total: int):
     try:
-        temp_list = challenges
+        temp_list = challenges.copy()
         random_challenges: list = []
-    
+     
         for i in range(total):
-            index = random.randint(0,len(temp_list))
+            index = random.randint(0,len(temp_list) -1)
             challenge = temp_list.pop(index)
             random_challenges.append(challenge)
-
+        return random_challenges
+     
     except Exception as e:
         print(f"An error occured: {e}")
         return None
@@ -120,7 +121,6 @@ class BingoButton(ui.Button):
 class BingoView(ui.View):
     def __init__(self, config: BingoRunConfig_c, id: Ids):
         super().__init__(timeout=43200) # 12hr timeout
-        self.channel = Ids.channel_id
         
         try: 
             total_buttons: int = config.size[0] * config.size[1]
@@ -129,9 +129,9 @@ class BingoView(ui.View):
             if len(random_list) == 0:
                 print("Random list is empty")
                 return
-
-            for i, current_button in enumerate(total_buttons):
-                row = i // config.size[0]  
+                
+            for i in range(total_buttons):
+                row = i // config.size[0]
                 self.add_item(BingoButton(label=random_list[i], row=row, config=config))
 
         except Exception as e:
@@ -262,7 +262,7 @@ async def set_board_size(ctx, width: int, height: int):
 
 @bot.command(name='challenges')
 @commands.dm_only()
-async def set_players(ctx, *, data: str):
+async def set_challenges(ctx, *, data: str):
     try: 
         user_id = ctx.author.id
         
@@ -281,8 +281,21 @@ async def set_players(ctx, *, data: str):
         if len(challenge_list) < board_size:
             await ctx.send(f'You challenge list has {len(challenge_list)} amount of challenges. It needs {board_size} challenges')
             return 
+        
+        altered_challenge_list: list = []
+        altered_var: str = '----------------------------------------------------'
+        total_size: float = len(altered_var)/2
 
-        USER_CONFIGS[user_id].challenge_list = challenge_list
+        for challenge in challenge_list:
+            temp_altered: str = altered_var
+            size:int = len(challenge)
+            position: float = size/2
+
+            start_pos: int = int(total_size) - int(position)
+            temp_altered = temp_altered[:start_pos] + challenge + temp_altered[start_pos + size:]
+            altered_challenge_list.append(temp_altered)
+
+        USER_CONFIGS[user_id].challenge_list = altered_challenge_list
         await ctx.send(f"All players set: {USER_CONFIGS[user_id].challenge_list}")
 
     except Exception as e:
@@ -312,7 +325,7 @@ async def set_players(ctx, *, data: str):
             player_id: int = int(player_info[0])
             color: str = player_info[1]
 
-            is_id = checkId(player_id)
+            is_id = await checkId(player_id)
             is_color = checkColor(color)
 
             if is_id and is_color:
@@ -332,7 +345,37 @@ async def set_players(ctx, *, data: str):
         await ctx.send("Player IDs must be numbers. Format: `!players 123456789 red, 987654321 green`")
     except Exception as e:
         print(f"An error occured: {e}")
-        await ctx.send(f"An error occured: {e}")
+
+@bot.command(name='start')
+@commands.dm_only()
+async def start_game(ctx):
+    user_id = ctx.author.id
+    try:
+        if len(USER_CONFIGS[user_id].size) == 0:
+            await ctx.send("Board size is 0. Please set board size with !board_size")
+
+        elif len(USER_CONFIGS[user_id].player_dic) == 0:
+            await ctx.send("There are no players. Please set players with !players")
+
+        elif len(USER_CONFIGS[user_id].challenge_list) == 0:
+            await ctx.send("There are no challenges. Please set challenges with !challenges")
+
+        channel_id = USER_IDS[user_id].channel_id
+        channel = bot.get_channel(channel_id)
+        BingoView(USER_CONFIGS[user_id], USER_IDS[user_id])
+
+        view = BingoView(USER_CONFIGS[user_id], USER_IDS[user_id])
+
+        if not isinstance(channel, discord.abc.Messageable):
+            await ctx.send("The saved channel is not messageable!")
+            return
+
+        await channel.send("Bingo board is ready!", view=view)
+        await ctx.send("Game started! Check the server channel.")
+
+
+    except Exception as e:
+        print(f"An error occured: {e}")
 
 
 @new_game.error 
@@ -341,6 +384,8 @@ async def new_game_error(ctx, error):
         await ctx.send("This command is only used in servers") 
 
 
+@set_challenges.error
+@set_players.error
 @set_board_size.error
 async def set_board_size_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
@@ -349,5 +394,6 @@ async def set_board_size_error(ctx, error):
         await ctx.send("Args must be numbers. Usage `!board_size 5 5`")
     elif isinstance(error, commands.PrivateMessageOnly):
         await ctx.send("This command is only used in dms") 
+
 
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
