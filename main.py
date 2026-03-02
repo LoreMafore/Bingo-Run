@@ -90,6 +90,9 @@ def checkColor(color: str) -> bool:
         else: 
             return False
 
+    except Exception as e:
+        print(f"An error occured: {e}")
+        return False
 
 class BingoButton(ui.Button):
 
@@ -182,7 +185,7 @@ async def info(ctx):
                 "!board_size 5 5\n"
                 "This will give you a 5x5 board\n\n"
                 "To set who can play the game and which color they will be assigned to do the following: \n"
-                "!set_players [(\"user_1\", \"blue\"), (\"user_2\", \"red\")]\n"
+                "!set_players 123456789 red, 987654321 green\n"
                 "or\n"
                 "!set_players players.csv (where you uploaded the csv)\n\n"
                 "To see all colors do !colors\n\n"
@@ -258,21 +261,31 @@ async def set_board_size(ctx, width: int, height: int):
 
 @bot.command(name='players')
 @commands.dm_only()
-async def set_players(ctx, data: list[list]):
+async def set_players(ctx, *, data: str):
     try: 
         user_id = ctx.author.id
+        
+        if user_id not in USER_CONFIGS:
+            await ctx.send("You don't have an active game. Start one in a server with !new_game")
+            return
+
+        # Input format: "123456789 red, 987654321 green"
+        players = [p.strip().split() for p in data.split(',')]
 
         # [[id, color ], [id, color]]
-        for i, player_info in data, enumerate(len(data)):
-            id: int = int(player_info[0])
+        for i, player_info in enumerate(players):
+            if len(player_info) != 2:
+                await ctx.send(f"Player {i+1}'s info is wrong. Format: `player1_id player1_color, player2_id, player2_color`")
+                return
+
+            player_id: int = int(player_info[0])
             color: str = player_info[1]
 
-            is_id = checkId(id)
+            is_id = checkId(player_id)
             is_color = checkColor(color)
 
             if is_id and is_color:
-                USER_CONFIGS[user_id].player_dic.append(i+1,[id, color])
-                await ctx.send(f"You set the the players: {USER_CONFIGS[user_id].player_dic}")
+                USER_CONFIGS[user_id].player_dic[i+1] = [player_id, color]
 
             elif is_id == False:
                 await ctx.send(f"Player{i+1}'s id is not a real id")
@@ -282,9 +295,13 @@ async def set_players(ctx, data: list[list]):
 
             else:
                 await ctx.send(f"Player{i+1}'s color and id are both wrong")
+        await ctx.send(f"All players set: {USER_CONFIGS[user_id].player_dic}")
 
-
-
+    except ValueError:
+        await ctx.send("Player IDs must be numbers. Format: `!players 123456789 red, 987654321 green`")
+    except Exception as e:
+        print(f"An error occured: {e}")
+        await ctx.send(f"An error occured: {e}")
 
 
 @new_game.error 
@@ -299,5 +316,7 @@ async def set_board_size_error(ctx, error):
         await ctx.send("Please provide both width and height! Usage: `!board_size <width> <height>`")
     elif isinstance(error, commands.BadArgument):
         await ctx.send("Args must be numbers. Usage `!board_size 5 5`")
+    elif isinstance(error, commands.PrivateMessageOnly):
+        await ctx.send("This command is only used in dms") 
 
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
