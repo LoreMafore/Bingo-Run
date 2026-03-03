@@ -283,7 +283,12 @@ async def set_challenges(ctx, *, data: str):
             return 
         
         altered_challenge_list: list = []
-        altered_var: str = '----------------------------------------------------'
+        altered_var: str = ''
+        longest_word: int = 0
+
+        longest_word = max(len(c) for c in challenge_list)
+        altered_var = '-' * longest_word
+
         total_size: float = len(altered_var)/2
 
         for challenge in challenge_list:
