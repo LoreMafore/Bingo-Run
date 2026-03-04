@@ -401,4 +401,5 @@ async def set_board_size_error(ctx, error):
         await ctx.send("This command is only used in dms") 
 
 
+
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
