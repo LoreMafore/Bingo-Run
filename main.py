@@ -352,6 +352,108 @@ async def set_players(ctx, *, data: str):
         print(f"An error occured: {e}")
 
 
+@bot.command(name='load')
+@commands.dm_only()
+async def load_config(ctx):
+    try:
+        user_id = ctx.author.id
+
+        if user_id not in USER_CONFIGS:
+            await ctx.send("You don't have an active game. Start one in a server with !new_game")
+            return
+
+        if not ctx.message.attachments:
+            await ctx.send("Please attach a CSV file. Usage: `!load` with a .csv file attached")
+            return
+
+        attachment = ctx.message.attachments[0]
+        if not attachment.filename.endswith('.csv'):
+            await ctx.send("File must be a .csv file")
+            return
+
+        content = await attachment.read()
+        lines = content.decode('utf-8').splitlines()
+
+        for line in lines:
+            parts = [p.strip() for p in line.split(',')]
+            keyword = parts[0].lower()
+
+            if keyword == 'board':
+                width = int(parts[1])
+                height = int(parts[2])
+
+                if width > 5 or width < 0:
+                    await ctx.send("Width must be between 0 and 5")
+                    return
+                if height > 5 or height < 0:
+                    await ctx.send("Height must be between 0 and 5")
+                    return
+
+                USER_CONFIGS[user_id].size = [width, height]
+                await ctx.send(f"Board size set to: {width}x{height}")
+
+            elif keyword == 'players':
+                player_entries = parts[1:]
+
+                for i, entry in enumerate(player_entries):
+                    player_info = entry.strip().split()
+                    if len(player_info) != 2:
+                        await ctx.send(f"Player {i+1} format is wrong. Expected: `id color`")
+                        return
+
+                    player_id = int(player_info[0])
+                    color = player_info[1]
+
+                    is_id = await checkId(player_id)
+                    is_color = checkColor(color)
+
+                    if is_id and is_color:
+                        USER_CONFIGS[user_id].player_dic[i+1] = [player_id, color]
+                    elif not is_id:
+                        await ctx.send(f"Player {i+1}'s ID is not valid")
+                    elif not is_color:
+                        await ctx.send(f"Player {i+1}'s color is not valid")
+
+                await ctx.send(f"Players set: {USER_CONFIGS[user_id].player_dic}")
+
+            elif keyword == 'challenges':
+                if len(USER_CONFIGS[user_id].size) == 0:
+                    await ctx.send("Board size must be set before challenges. Make sure your CSV has a `board` line before `challenges`")
+                    return
+
+                challenge_list = parts[1:]
+                board_size = USER_CONFIGS[user_id].size[0] * USER_CONFIGS[user_id].size[1]
+
+                if len(challenge_list) < board_size:
+                    await ctx.send(f"Not enough challenges. Need {board_size}, got {len(challenge_list)}")
+                    return
+
+                longest_word = max(len(c) for c in challenge_list)
+                altered_var = '-' * longest_word
+                total_size = len(altered_var) / 2
+                altered_challenge_list = []
+
+                for challenge in challenge_list:
+                    temp = altered_var
+                    size = len(challenge)
+                    start_pos = int(total_size) - int(size / 2)
+                    temp = temp[:start_pos] + challenge + temp[start_pos + size:]
+                    altered_challenge_list.append(temp)
+
+                USER_CONFIGS[user_id].challenge_list = altered_challenge_list
+                await ctx.send(f"Challenges set!")
+
+            # Any other line (comments, blanks, headers) is just ignored
+
+        await ctx.send("Config loaded! Use `!all_info` to review, then `!start` when ready.")
+
+    except ValueError as e:
+        await ctx.send(f"Invalid number format in CSV: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        await ctx.send(f"An error occurred: {e}")
+
+
 @bot.command(name='start')
 @commands.dm_only()
 async def start_game(ctx):
