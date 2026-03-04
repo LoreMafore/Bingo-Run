@@ -351,6 +351,7 @@ async def set_players(ctx, *, data: str):
     except Exception as e:
         print(f"An error occured: {e}")
 
+
 @bot.command(name='start')
 @commands.dm_only()
 async def start_game(ctx):
