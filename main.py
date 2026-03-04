@@ -403,7 +403,6 @@ async def load_config(ctx):
 
                     player_id = int(player_info[0])
                     color = player_info[1]
-
                     is_id = await checkId(player_id)
                     is_color = checkColor(color)
 
