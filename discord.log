@@ -1,20 +1,1402 @@
-[2026-03-04 08:56:05] [INFO    ] discord.client: logging in using static token
-[2026-03-04 08:56:05] [DEBUG   ] discord.http: GET https://discord.com/api/v10/users/@me with None has returned 200
-[2026-03-04 08:56:05] [DEBUG   ] discord.http: GET /users/@me has found its initial rate limit bucket hash (78bb8553d9352a5a2f89f9def401287a).
-[2026-03-04 08:56:05] [DEBUG   ] discord.http: GET https://discord.com/api/v10/users/@me has received {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None, 'mfa_enabled': False, 'locale': 'en-US', 'premium_type': 0, 'email': None, 'verified': True, 'bio': ''}
-[2026-03-04 08:56:06] [DEBUG   ] discord.http: GET https://discord.com/api/v10/oauth2/applications/@me with None has returned 200
-[2026-03-04 08:56:06] [DEBUG   ] discord.http: GET /oauth2/applications/@me has found its initial rate limit bucket hash (d28a133af187e91d71d96a223467ce49).
-[2026-03-04 08:56:06] [DEBUG   ] discord.http: GET https://discord.com/api/v10/oauth2/applications/@me has received {'id': '1475271757501038715', 'name': 'Bingo-Run', 'icon': None, 'description': '', 'type': None, 'bot': {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'summary': '', 'is_monetized': False, 'is_verified': False, 'is_discoverable': False, 'bot_public': True, 'bot_require_code_grant': False, 'install_params': {'scopes': ['applications.commands'], 'permissions': '0'}, 'integration_types_config': {'0': {'oauth2_install_params': {'scopes': ['applications.commands'], 'permissions': '0'}}, '1': {'oauth2_install_params': {'scopes': ['applications.commands'], 'permissions': '0'}}}, 'verify_key': '0d73396778bf1a8530e2259f6de881765ca2e0f75e795d07882688ced0d7ef3e', 'flags': 565248, 'hook': True, 'storefront_available': False, 'redirect_uris': [], 'interactions_endpoint_url': None, 'role_connections_verification_url': None, 'owner': {'id': '566083012928733224', 'username': 'loremafore', 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7', 'discriminator': '0', 'public_flags': 0, 'flags': 0, 'banner': None, 'accent_color': None, 'global_name': 'Lore', 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'approximate_guild_count': 1, 'approximate_user_install_count': 0, 'approximate_user_authorization_count': 0, 'interactions_event_types': [], 'interactions_version': 1, 'explicit_content_filter': 0, 'rpc_application_state': 0, 'store_application_state': 1, 'verification_state': 1, 'integration_public': True, 'integration_require_code_grant': False, 'discoverability_state': 1, 'discovery_eligibility_flags': 224, 'monetization_state': 1, 'verification_eligibility_flags': 91036, 'monetization_eligibility_flags': 181988, 'bot_approximate_guild_count': 1, 'team': None, 'internal_guild_restriction': 2, 'approved_consoles': [], 'pricing_localization_strategy': 'localized_price_sets'}
-[2026-03-04 08:56:06] [DEBUG   ] discord.gateway: Created websocket connected to wss://gateway.discord.gg/
-[2026-03-04 08:56:06] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-arm-us-east1-d-hc9k",{"micros":0.0}]']}}
-[2026-03-04 08:56:06] [DEBUG   ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
-[2026-03-04 08:56:06] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
-[2026-03-04 08:56:06] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'READY', 's': 1, 'op': 0, 'd': {'v': 10, 'user_settings': {}, 'user': {'verified': True, 'username': 'Bingo-Run', 'primary_guild': None, 'mfa_enabled': False, 'id': '1475271757501038715', 'global_name': None, 'flags': 0, 'email': None, 'discriminator': '5124', 'clan': None, 'bot': True, 'avatar': None}, 'session_type': 'normal', 'session_id': '8142e78c32e9cba0532bb081668c065b', 'resume_gateway_url': 'wss://gateway-us-east1-d.discord.gg', 'relationships': [], 'private_channels': [], 'presences': [], 'guilds': [{'unavailable': True, 'id': '1475273445691359334'}], 'guild_join_requests': [], 'geo_ordered_rtc_regions': ['us-central', 'oregon', 'us-south', 'seattle', 'atlanta'], 'game_relationships': [], 'auth': {}, 'application': {'id': '1475271757501038715', 'flags_new': '565248', 'flags': 565248}, '_trace': ['["gateway-prd-arm-us-east1-d-hc9k",{"micros":124078,"calls":["id_created",{"micros":453,"calls":[]},"session_lookup_time",{"micros":271,"calls":[]},"session_lookup_finished",{"micros":13,"calls":[]},"discord-sessions-prd-2-171",{"micros":122818,"calls":["start_session",{"micros":85364,"calls":["discord-api-rpc-64dddb4d84-t44kc",{"micros":40961,"calls":["get_user",{"micros":6671},"get_guilds",{"micros":3149},"send_scheduled_deletion_message",{"micros":12},"guild_join_requests",{"micros":6595},"authorized_ip_coro",{"micros":10},"pending_payments",{"micros":1158},"apex_experiments",{"micros":37172},"sessions_experiments",{"micros":5},"user_activities",{"micros":3},"played_application_ids",{"micros":2},"linked_users",{"micros":2},"ad_personalization_toggles_disabled",{"micros":2},"regional_feature_config",{"micros":2}]}]},"starting_guild_connect",{"micros":59,"calls":[]},"presence_started",{"micros":12624,"calls":[]},"guilds_started",{"micros":79,"calls":[]},"lobbies_started",{"micros":1,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":24661,"calls":[]},"connect_finished",{"micros":24677,"calls":[]},"build_ready",{"micros":10,"calls":[]},"clean_ready",{"micros":3,"calls":[]},"optimize_ready",{"micros":0,"calls":[]},"split_ready",{"micros":0,"calls":[]}]}]}]']}}
-[2026-03-04 08:56:06] [DEBUG   ] discord.client: Dispatching event socket_event_type
-[2026-03-04 08:56:06] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 8142e78c32e9cba0532bb081668c065b).
-[2026-03-04 08:56:06] [DEBUG   ] discord.client: Dispatching event connect
-[2026-03-04 08:56:06] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_CREATE', 's': 2, 'op': 0, 'd': {'home_header': None, 'large': False, 'max_video_channel_users': 25, 'moderator_reporting': None, 'application_command_counts': {}, 'profile': None, 'premium_subscription_count': 0, 'stickers': [], 'max_stage_video_channel_users': 50, 'splash': None, 'presences': [], 'premium_progress_bar_enabled_user_updated_at': None, 'preferred_locale': 'en-US', 'id': '1475273445691359334', 'banner': None, 'name': 'test_bot_server', 'members': [{'user': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'display_name': None, 'discriminator': '5124', 'collectibles': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}], 'safety_alerts_channel_id': None, 'region': 'deprecated', 'voice_states': [], 'soundboard_sounds': [], 'application_id': None, 'verification_level': 0, 'icon': None, 'premium_features': None, 'inventory_settings': None, 'threads': [], 'owner_configured_content_level': 0, 'system_channel_flags': 0, 'max_members': 25000000, 'roles': [{'version': 1771802998898, 'unicode_emoji': None, 'tags': {}, 'position': 0, 'permissions': '2248473465835073', 'name': '@everyone', 'mentionable': False, 'managed': False, 'id': '1475273445691359334', 'icon': None, 'hoist': False, 'flags': 0, 'colors': {'tertiary_color': None, 'secondary_color': None, 'primary_color': 0}, 'color': 0}, {'version': 1771803064031, 'unicode_emoji': None, 'tags': {'bot_id': '1475271757501038715'}, 'position': 1, 'permissions': '2251920072895488', 'name': 'Bingo-Run', 'mentionable': False, 'managed': True, 'id': '1475273675761782900', 'icon': None, 'hoist': False, 'flags': 0, 'colors': {'tertiary_color': None, 'secondary_color': None, 'primary_color': 0}, 'color': 0}], 'vanity_url_code': None, 'rules_channel_id': None, 'description': None, 'public_updates_channel_id': None, 'premium_progress_bar_enabled': False, 'incidents_data': None, 'explicit_content_filter': 0, 'member_count': 3, 'system_channel_id': '1475273446505058407', 'activity_instances': [], 'hub_type': None, 'default_message_notifications': 0, 'afk_timeout': 300, 'guild_scheduled_events': [], 'afk_channel_id': None, 'discovery_splash': None, 'stage_instances': [], 'emojis': [], 'latest_onboarding_question_id': None, 'mfa_level': 0, 'embedded_activities': [], 'lazy': True, 'owner_id': '566083012928733224', 'premium_tier': 0, 'version': 1771802998935, 'nsfw_level': 0, 'channels': [{'version': 1771802998905, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Text Channels', 'id': '1475273446505058405', 'flags': 0}, {'version': 1771802998914, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Voice Channels', 'id': '1475273446505058406', 'flags': 0}, {'version': 1771802998923, 'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1475273446505058405', 'name': 'general', 'last_message_id': '1478070690019020801', 'id': '1475273446505058407', 'icon_emoji': {'name': '👋', 'id': None}, 'flags': 0}, {'version': 1771802998930, 'user_limit': 0, 'type': 2, 'rtc_region': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1475273446505058406', 'name': 'General', 'last_message_id': None, 'id': '1475273446505058408', 'icon_emoji': {'name': '🎙', 'id': None}, 'flags': 0, 'bitrate': 64000}], 'nsfw': False, 'features': [], 'unavailable': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00'}}
-[2026-03-04 08:56:06] [DEBUG   ] discord.client: Dispatching event socket_event_type
-[2026-03-04 08:56:06] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_MEMBERS_CHUNK', 's': 3, 'op': 0, 'd': {'nonce': '46d194b37cb2dc29c1618e19d222e17b', 'members': [{'user': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'display_name': 'Lore', 'discriminator': '0', 'collectibles': None, 'bot': False, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:29:58.812000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, {'user': {'username': 'conradbot0083', 'public_flags': 0, 'primary_guild': None, 'id': '699317005282705559', 'global_name': 'ConradBot', 'display_name_styles': None, 'display_name': 'ConradBot', 'discriminator': '0', 'collectibles': None, 'bot': False, 'avatar_decoration_data': None, 'avatar': None}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-03-01T23:33:41.194000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, {'user': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'display_name': None, 'discriminator': '5124', 'collectibles': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}], 'guild_id': '1475273445691359334', 'chunk_index': 0, 'chunk_count': 1}}
-[2026-03-04 08:56:06] [DEBUG   ] discord.client: Dispatching event socket_event_type
-[2026-03-04 08:56:06] [DEBUG   ] discord.state: Processed a chunk for 3 members in guild ID 1475273445691359334.
+[2026-03-04 09:45:40] [INFO    ] discord.client: logging in using static token
+[2026-03-04 09:45:40] [DEBUG   ] discord.http: GET https://discord.com/api/v10/users/@me with None has returned 200
+[2026-03-04 09:45:40] [DEBUG   ] discord.http: GET /users/@me has found its initial rate limit bucket hash (78bb8553d9352a5a2f89f9def401287a).
+[2026-03-04 09:45:40] [DEBUG   ] discord.http: GET https://discord.com/api/v10/users/@me has received {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None, 'mfa_enabled': False, 'locale': 'en-US', 'premium_type': 0, 'email': None, 'verified': True, 'bio': ''}
+[2026-03-04 09:45:40] [DEBUG   ] discord.http: GET https://discord.com/api/v10/oauth2/applications/@me with None has returned 200
+[2026-03-04 09:45:40] [DEBUG   ] discord.http: GET /oauth2/applications/@me has found its initial rate limit bucket hash (d28a133af187e91d71d96a223467ce49).
+[2026-03-04 09:45:40] [DEBUG   ] discord.http: GET https://discord.com/api/v10/oauth2/applications/@me has received {'id': '1475271757501038715', 'name': 'Bingo-Run', 'icon': None, 'description': '', 'type': None, 'bot': {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'summary': '', 'is_monetized': False, 'is_verified': False, 'is_discoverable': False, 'bot_public': True, 'bot_require_code_grant': False, 'install_params': {'scopes': ['applications.commands'], 'permissions': '0'}, 'integration_types_config': {'0': {'oauth2_install_params': {'scopes': ['applications.commands'], 'permissions': '0'}}, '1': {'oauth2_install_params': {'scopes': ['applications.commands'], 'permissions': '0'}}}, 'verify_key': '0d73396778bf1a8530e2259f6de881765ca2e0f75e795d07882688ced0d7ef3e', 'flags': 565248, 'hook': True, 'storefront_available': False, 'redirect_uris': [], 'interactions_endpoint_url': None, 'role_connections_verification_url': None, 'owner': {'id': '566083012928733224', 'username': 'loremafore', 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7', 'discriminator': '0', 'public_flags': 0, 'flags': 0, 'banner': None, 'accent_color': None, 'global_name': 'Lore', 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'approximate_guild_count': 1, 'approximate_user_install_count': 0, 'approximate_user_authorization_count': 0, 'interactions_event_types': [], 'interactions_version': 1, 'explicit_content_filter': 0, 'rpc_application_state': 0, 'store_application_state': 1, 'verification_state': 1, 'integration_public': True, 'integration_require_code_grant': False, 'discoverability_state': 1, 'discovery_eligibility_flags': 224, 'monetization_state': 1, 'verification_eligibility_flags': 91036, 'monetization_eligibility_flags': 181988, 'bot_approximate_guild_count': 1, 'team': None, 'internal_guild_restriction': 2, 'approved_consoles': [], 'pricing_localization_strategy': 'localized_price_sets'}
+[2026-03-04 09:45:41] [DEBUG   ] discord.gateway: Created websocket connected to wss://gateway.discord.gg/
+[2026-03-04 09:45:41] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-arm-us-east1-b-8f41",{"micros":0.0}]']}}
+[2026-03-04 09:45:41] [DEBUG   ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2026-03-04 09:45:41] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 09:45:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'READY', 's': 1, 'op': 0, 'd': {'v': 10, 'user_settings': {}, 'user': {'verified': True, 'username': 'Bingo-Run', 'primary_guild': None, 'mfa_enabled': False, 'id': '1475271757501038715', 'global_name': None, 'flags': 0, 'email': None, 'discriminator': '5124', 'clan': None, 'bot': True, 'avatar': None}, 'session_type': 'normal', 'session_id': '9a1dd4d2f6fdc81c763c49cef552117c', 'resume_gateway_url': 'wss://gateway-us-east1-b.discord.gg', 'relationships': [], 'private_channels': [], 'presences': [], 'guilds': [{'unavailable': True, 'id': '1475273445691359334'}], 'guild_join_requests': [], 'geo_ordered_rtc_regions': ['us-central', 'oregon', 'us-south', 'seattle', 'atlanta'], 'game_relationships': [], 'auth': {}, 'application': {'id': '1475271757501038715', 'flags_new': '565248', 'flags': 565248}, '_trace': ['["gateway-prd-arm-us-east1-b-8f41",{"micros":1659457,"calls":["id_created",{"micros":358,"calls":[]},"session_lookup_time",{"micros":296,"calls":[]},"session_lookup_finished",{"micros":8,"calls":[]},"discord-sessions-prd-2-58",{"micros":1658370,"calls":["start_session",{"micros":1615348,"calls":["discord-api-rpc-64dddb4d84-6k6rt",{"micros":254253,"calls":["get_user",{"micros":132947},"get_guilds",{"micros":29769},"send_scheduled_deletion_message",{"micros":13},"guild_join_requests",{"micros":336},"authorized_ip_coro",{"micros":17},"pending_payments",{"micros":1370},"apex_experiments",{"micros":80766},"sessions_experiments",{"micros":6},"user_activities",{"micros":4},"played_application_ids",{"micros":3},"linked_users",{"micros":10},"ad_personalization_toggles_disabled",{"micros":3},"regional_feature_config",{"micros":3}]}]},"starting_guild_connect",{"micros":35,"calls":[]},"presence_started",{"micros":22056,"calls":[]},"guilds_started",{"micros":74,"calls":[]},"lobbies_started",{"micros":1,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":20826,"calls":[]},"connect_finished",{"micros":20839,"calls":[]},"build_ready",{"micros":13,"calls":[]},"clean_ready",{"micros":2,"calls":[]},"optimize_ready",{"micros":1,"calls":[]},"split_ready",{"micros":0,"calls":[]}]}]}]']}}
+[2026-03-04 09:45:42] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:45:42] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9a1dd4d2f6fdc81c763c49cef552117c).
+[2026-03-04 09:45:42] [DEBUG   ] discord.client: Dispatching event connect
+[2026-03-04 09:45:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_CREATE', 's': 2, 'op': 0, 'd': {'owner_id': '566083012928733224', 'premium_features': None, 'soundboard_sounds': [], 'member_count': 3, 'home_header': None, 'rules_channel_id': None, 'latest_onboarding_question_id': None, 'profile': None, 'vanity_url_code': None, 'verification_level': 0, 'hub_type': None, 'explicit_content_filter': 0, 'max_stage_video_channel_users': 50, 'nsfw': False, 'stickers': [], 'channels': [{'version': 1771802998905, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Text Channels', 'id': '1475273446505058405', 'flags': 0}, {'version': 1771802998914, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Voice Channels', 'id': '1475273446505058406', 'flags': 0}, {'version': 1771802998923, 'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1475273446505058405', 'name': 'general', 'last_message_id': '1478070690019020801', 'id': '1475273446505058407', 'icon_emoji': {'name': '👋', 'id': None}, 'flags': 0}, {'version': 1771802998930, 'user_limit': 0, 'type': 2, 'rtc_region': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1475273446505058406', 'name': 'General', 'last_message_id': None, 'id': '1475273446505058408', 'icon_emoji': {'name': '🎙', 'id': None}, 'flags': 0, 'bitrate': 64000}], 'max_video_channel_users': 25, 'discovery_splash': None, 'lazy': True, 'afk_timeout': 300, 'id': '1475273445691359334', 'inventory_settings': None, 'preferred_locale': 'en-US', 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'name': 'test_bot_server', 'presences': [], 'premium_progress_bar_enabled': False, 'roles': [{'version': 1771802998898, 'unicode_emoji': None, 'tags': {}, 'position': 0, 'permissions': '2248473465835073', 'name': '@everyone', 'mentionable': False, 'managed': False, 'id': '1475273445691359334', 'icon': None, 'hoist': False, 'flags': 0, 'colors': {'tertiary_color': None, 'secondary_color': None, 'primary_color': 0}, 'color': 0}, {'version': 1771803064031, 'unicode_emoji': None, 'tags': {'bot_id': '1475271757501038715'}, 'position': 1, 'permissions': '2251920072895488', 'name': 'Bingo-Run', 'mentionable': False, 'managed': True, 'id': '1475273675761782900', 'icon': None, 'hoist': False, 'flags': 0, 'colors': {'tertiary_color': None, 'secondary_color': None, 'primary_color': 0}, 'color': 0}], 'splash': None, 'threads': [], 'guild_scheduled_events': [], 'features': [], 'owner_configured_content_level': 0, 'voice_states': [], 'description': None, 'public_updates_channel_id': None, 'members': [{'user': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'display_name': None, 'discriminator': '5124', 'collectibles': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}], 'embedded_activities': [], 'emojis': [], 'premium_progress_bar_enabled_user_updated_at': None, 'region': 'deprecated', 'premium_tier': 0, 'unavailable': False, 'stage_instances': [], 'icon': None, 'system_channel_flags': 0, 'safety_alerts_channel_id': None, 'application_command_counts': {}, 'application_id': None, 'afk_channel_id': None, 'max_members': 25000000, 'premium_subscription_count': 0, 'mfa_level': 0, 'large': False, 'version': 1771802998935, 'nsfw_level': 0, 'activity_instances': [], 'banner': None, 'system_channel_id': '1475273446505058407', 'incidents_data': None, 'default_message_notifications': 0, 'moderator_reporting': None}}
+[2026-03-04 09:45:42] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:45:43] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_MEMBERS_CHUNK', 's': 3, 'op': 0, 'd': {'nonce': 'c8f7dbb40dfdd00a2f91a3012ac24463', 'members': [{'user': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'display_name': 'Lore', 'discriminator': '0', 'collectibles': None, 'bot': False, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:29:58.812000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, {'user': {'username': 'conradbot0083', 'public_flags': 0, 'primary_guild': None, 'id': '699317005282705559', 'global_name': 'ConradBot', 'display_name_styles': None, 'display_name': 'ConradBot', 'discriminator': '0', 'collectibles': None, 'bot': False, 'avatar_decoration_data': None, 'avatar': None}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-03-01T23:33:41.194000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, {'user': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'display_name': None, 'discriminator': '5124', 'collectibles': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}], 'guild_id': '1475273445691359334', 'chunk_index': 0, 'chunk_count': 1}}
+[2026-03-04 09:45:43] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:45:43] [DEBUG   ] discord.state: Processed a chunk for 3 members in guild ID 1475273445691359334.
+[2026-03-04 09:45:44] [DEBUG   ] discord.client: Dispatching event guild_available
+[2026-03-04 09:45:44] [DEBUG   ] discord.client: Dispatching event ready
+[2026-03-04 09:45:56] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 4, 'op': 0, 'd': {'user_id': '566083012928733224', 'timestamp': 1772639156, 'member': {'user': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'display_name': 'Lore', 'discriminator': '0', 'collectibles': None, 'bot': False, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:29:58.812000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, 'channel_id': '1475273446505058407', 'guild_id': '1475273445691359334'}}
+[2026-03-04 09:45:56] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:45:56] [DEBUG   ] discord.client: Dispatching event typing
+[2026-03-04 09:45:56] [DEBUG   ] discord.client: Dispatching event raw_typing
+[2026-03-04 09:45:58] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 5, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:45:58.066000+00:00', 'pinned': False, 'nonce': '1478780548812898304', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:29:58.812000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, 'id': '1478780552231260222', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': '!new_game', 'components': [], 'channel_type': 0, 'channel_id': '1475273446505058407', 'author': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'discriminator': '0', 'collectibles': None, 'clan': None, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'attachments': [], 'guild_id': '1475273445691359334'}}
+[2026-03-04 09:45:58] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:45:58] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:45:58] [DEBUG   ] discord.client: Dispatching event command
+[2026-03-04 09:45:58] [DEBUG   ] discord.http: POST https://discord.com/api/v10/users/@me/channels with {"recipient_id":566083012928733224} has returned 200
+[2026-03-04 09:45:58] [DEBUG   ] discord.http: POST /users/@me/channels has found its initial rate limit bucket hash (3f1ecb90c49938368145d0f8794b2707).
+[2026-03-04 09:45:58] [DEBUG   ] discord.http: POST https://discord.com/api/v10/users/@me/channels has received {'id': '1475499031546302625', 'type': 1, 'last_message_id': '1478070691528970361', 'flags': 0, 'recipients': [{'id': '566083012928733224', 'username': 'loremafore', 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7', 'discriminator': '0', 'public_flags': 0, 'flags': 0, 'banner': None, 'accent_color': None, 'global_name': 'Lore', 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}]}
+[2026-03-04 09:45:58] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 6, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:45:59.300000+00:00', 'pinned': False, 'nonce': '1866357407536072376', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780557407162623', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'Send !info to learn how to start the game', 'components': [], 'channel_type': 1, 'channel_id': '1475499031546302625', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': []}}
+[2026-03-04 09:45:58] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:45:58] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:45:58] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages with {"content":"Send !info to learn how to start the game","components":[],"nonce":"1866357407536072376","enforce_nonce":true,"tts":false} has returned 200
+[2026-03-04 09:45:58] [DEBUG   ] discord.http: POST /channels/{channel_id}/messages has found its initial rate limit bucket hash (62df3a8bf3cb0dd93018dd80d06039f6).
+[2026-03-04 09:45:58] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages has received {'type': 0, 'content': 'Send !info to learn how to start the game', 'mentions': [], 'mention_roles': [], 'attachments': [], 'embeds': [], 'timestamp': '2026-03-04T15:45:59.300000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'id': '1478780557407162623', 'channel_id': '1475499031546302625', 'author': {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'pinned': False, 'mention_everyone': False, 'tts': False, 'nonce': '1866357407536072376'}
+[2026-03-04 09:45:58] [DEBUG   ] discord.client: Dispatching event command_completion
+[2026-03-04 09:46:03] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 7, 'op': 0, 'd': {'user_id': '566083012928733224', 'timestamp': 1772639164, 'channel_id': '1475499031546302625'}}
+[2026-03-04 09:46:03] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:03] [DEBUG   ] discord.client: Dispatching event typing
+[2026-03-04 09:46:03] [DEBUG   ] discord.client: Dispatching event raw_typing
+[2026-03-04 09:46:19] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 8, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:20.349000+00:00', 'pinned': False, 'nonce': '1478780640529743872', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780645693067364', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': '!load', 'components': [], 'channel_type': 1, 'channel_id': '1475499031546302625', 'author': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'discriminator': '0', 'collectibles': None, 'clan': None, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'attachments': [{'url': 'https://cdn.discordapp.com/attachments/1475499031546302625/1478780645047140534/test.csv?ex=69a9a54c&is=69a853cc&hm=a4f39fb2240766a794ee43c6c95226dcf1a203df30251f457e19d93301a2df70&', 'size': 256, 'proxy_url': 'https://media.discordapp.net/attachments/1475499031546302625/1478780645047140534/test.csv?ex=69a9a54c&is=69a853cc&hm=a4f39fb2240766a794ee43c6c95226dcf1a203df30251f457e19d93301a2df70&', 'original_content_type': 'text/csv', 'id': '1478780645047140534', 'filename': 'test.csv', 'content_type': 'text/csv; charset=utf-8', 'content_scan_version': 0}]}}
+[2026-03-04 09:46:19] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:19] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:46:19] [DEBUG   ] discord.client: Dispatching event command
+[2026-03-04 09:46:20] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 9, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:20.888000+00:00', 'pinned': False, 'nonce': '6111695316454152363', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780647953793075', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'Board size set to: 3x5', 'components': [], 'channel_type': 1, 'channel_id': '1475499031546302625', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': []}}
+[2026-03-04 09:46:20] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:20] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:46:20] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages with {"content":"Board size set to: 3x5","components":[],"nonce":"6111695316454152363","enforce_nonce":true,"tts":false} has returned 200
+[2026-03-04 09:46:20] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages has received {'type': 0, 'content': 'Board size set to: 3x5', 'mentions': [], 'mention_roles': [], 'attachments': [], 'embeds': [], 'timestamp': '2026-03-04T15:46:20.888000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'id': '1478780647953793075', 'channel_id': '1475499031546302625', 'author': {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'pinned': False, 'mention_everyone': False, 'tts': False, 'nonce': '6111695316454152363'}
+[2026-03-04 09:46:20] [DEBUG   ] discord.http: GET https://discord.com/api/v10/users/566083012928733224 with None has returned 200
+[2026-03-04 09:46:20] [DEBUG   ] discord.http: GET /users/{user_id} has found its initial rate limit bucket hash (f443e11834066cbff3804b99080cb67d).
+[2026-03-04 09:46:20] [DEBUG   ] discord.http: GET https://discord.com/api/v10/users/566083012928733224 has received {'id': '566083012928733224', 'username': 'loremafore', 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7', 'discriminator': '0', 'public_flags': 0, 'flags': 0, 'banner': None, 'accent_color': None, 'global_name': 'Lore', 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}
+[2026-03-04 09:46:20] [DEBUG   ] discord.http: GET https://discord.com/api/v10/users/699317005282705559 with None has returned 200
+[2026-03-04 09:46:20] [DEBUG   ] discord.http: GET https://discord.com/api/v10/users/699317005282705559 has received {'id': '699317005282705559', 'username': 'conradbot0083', 'avatar': None, 'discriminator': '0', 'public_flags': 0, 'flags': 0, 'banner': None, 'accent_color': None, 'global_name': 'ConradBot', 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}
+[2026-03-04 09:46:20] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 10, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:21.487000+00:00', 'pinned': False, 'nonce': '6524545369034444780', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780650466181191', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': "Players set: {1: [566083012928733224, 'green'], 2: [699317005282705559, 'red']}", 'components': [], 'channel_type': 1, 'channel_id': '1475499031546302625', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': []}}
+[2026-03-04 09:46:20] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:20] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:46:20] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages with {"content":"Players set: {1: [566083012928733224, 'green'], 2: [699317005282705559, 'red']}","components":[],"nonce":"6524545369034444780","enforce_nonce":true,"tts":false} has returned 200
+[2026-03-04 09:46:20] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages has received {'type': 0, 'content': "Players set: {1: [566083012928733224, 'green'], 2: [699317005282705559, 'red']}", 'mentions': [], 'mention_roles': [], 'attachments': [], 'embeds': [], 'timestamp': '2026-03-04T15:46:21.487000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'id': '1478780650466181191', 'channel_id': '1475499031546302625', 'author': {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'pinned': False, 'mention_everyone': False, 'tts': False, 'nonce': '6524545369034444780'}
+[2026-03-04 09:46:21] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 11, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:21.756000+00:00', 'pinned': False, 'nonce': '1126525051897170977', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780651594317895', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'Challenges set!', 'components': [], 'channel_type': 1, 'channel_id': '1475499031546302625', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': []}}
+[2026-03-04 09:46:21] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:21] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:46:21] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages with {"content":"Challenges set!","components":[],"nonce":"1126525051897170977","enforce_nonce":true,"tts":false} has returned 200
+[2026-03-04 09:46:21] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages has received {'type': 0, 'content': 'Challenges set!', 'mentions': [], 'mention_roles': [], 'attachments': [], 'embeds': [], 'timestamp': '2026-03-04T15:46:21.756000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'id': '1478780651594317895', 'channel_id': '1475499031546302625', 'author': {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'pinned': False, 'mention_everyone': False, 'tts': False, 'nonce': '1126525051897170977'}
+[2026-03-04 09:46:21] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 12, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:22.008000+00:00', 'pinned': False, 'nonce': '12019919550091722673', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780652651286529', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'Config loaded! Use `!all_info` to review, then `!start` when ready.', 'components': [], 'channel_type': 1, 'channel_id': '1475499031546302625', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': []}}
+[2026-03-04 09:46:21] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:21] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:46:21] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages with {"content":"Config loaded! Use `!all_info` to review, then `!start` when ready.","components":[],"nonce":"12019919550091722673","enforce_nonce":true,"tts":false} has returned 200
+[2026-03-04 09:46:21] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages has received {'type': 0, 'content': 'Config loaded! Use `!all_info` to review, then `!start` when ready.', 'mentions': [], 'mention_roles': [], 'attachments': [], 'embeds': [], 'timestamp': '2026-03-04T15:46:22.008000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'id': '1478780652651286529', 'channel_id': '1475499031546302625', 'author': {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'pinned': False, 'mention_everyone': False, 'tts': False, 'nonce': '12019919550091722673'}
+[2026-03-04 09:46:21] [DEBUG   ] discord.client: Dispatching event command_completion
+[2026-03-04 09:46:22] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 12.
+[2026-03-04 09:46:22] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 09:46:26] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 13, 'op': 0, 'd': {'user_id': '566083012928733224', 'timestamp': 1772639187, 'channel_id': '1475499031546302625'}}
+[2026-03-04 09:46:26] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:26] [DEBUG   ] discord.client: Dispatching event typing
+[2026-03-04 09:46:26] [DEBUG   ] discord.client: Dispatching event raw_typing
+[2026-03-04 09:46:29] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 14, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:30.289000+00:00', 'pinned': False, 'nonce': '1478780684007899136', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780687384576112', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': '!all_info', 'components': [], 'channel_type': 1, 'channel_id': '1475499031546302625', 'author': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'discriminator': '0', 'collectibles': None, 'clan': None, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'attachments': []}}
+[2026-03-04 09:46:29] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:29] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:46:29] [DEBUG   ] discord.client: Dispatching event command
+[2026-03-04 09:46:29] [DEBUG   ] discord.client: Dispatching event command_completion
+[2026-03-04 09:46:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 15, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:34.715000+00:00', 'pinned': False, 'nonce': '1478780702341201920', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780705948434565', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': '!start', 'components': [], 'channel_type': 1, 'channel_id': '1475499031546302625', 'author': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'discriminator': '0', 'collectibles': None, 'clan': None, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'attachments': []}}
+[2026-03-04 09:46:34] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:34] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:46:34] [DEBUG   ] discord.client: Dispatching event command
+[2026-03-04 09:46:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 16, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:34.905000+00:00', 'pinned': False, 'nonce': '5374185337746463972', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, 'id': '1478780706745352328', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'Bingo board is ready!', 'components': [{'type': 1, 'id': 1, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg9-', 'id': 2, 'custom_id': 'b432338a0bf95ebfe102147bdbbcd368'}, {'type': 2, 'style': 2, 'label': '-challeneg10', 'id': 3, 'custom_id': 'f8ffd6b2e74e7aad17611f3702c9a640'}, {'type': 2, 'style': 2, 'label': '-challeneg13', 'id': 4, 'custom_id': '2d1a5449f1dcb5d3e148983d8176a749'}]}, {'type': 1, 'id': 5, 'components': [{'type': 2, 'style': 2, 'label': 'challenege1s', 'id': 6, 'custom_id': 'accf6209e4ca648b853d04705984bd86'}, {'type': 2, 'style': 2, 'label': '-challeneg7-', 'id': 7, 'custom_id': 'bc0810f81fff21ddafcbaa2773a6bc4a'}, {'type': 2, 'style': 2, 'label': '-challeneg2-', 'id': 8, 'custom_id': '4774c2e4e8478f0334ad752870bf5d75'}]}, {'type': 1, 'id': 9, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg11', 'id': 10, 'custom_id': '8f156d56f79f21e39bba565c89b15ccf'}, {'type': 2, 'style': 2, 'label': '-challeneg12', 'id': 11, 'custom_id': 'f89bf50a0dcc1accc6eb339c76b1fe61'}, {'type': 2, 'style': 2, 'label': '-challeneg15', 'id': 12, 'custom_id': '09087adba2224b4ab25a8d5c2ed2a17b'}]}, {'type': 1, 'id': 13, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg6-', 'id': 14, 'custom_id': '3d04860122f56245a3d767535fe365da'}, {'type': 2, 'style': 2, 'label': '-challeneg8-', 'id': 15, 'custom_id': '02c58221647f95f5df7eff8a8105132c'}, {'type': 2, 'style': 2, 'label': '-challeneg3-', 'id': 16, 'custom_id': '8cafc43837d74b7ed8b21ec0625a3f79'}]}, {'type': 1, 'id': 17, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg14', 'id': 18, 'custom_id': '949dd14813113b24051d5276968ff165'}, {'type': 2, 'style': 2, 'label': '-challeneg4-', 'id': 19, 'custom_id': '6c43b498ce80e2bde2585ea38b91ca4c'}, {'type': 2, 'style': 2, 'label': '-challeneg5-', 'id': 20, 'custom_id': '2a5b3422ca46c30b974a22498153dc85'}]}], 'channel_type': 0, 'channel_id': '1475273446505058407', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': [], 'guild_id': '1475273445691359334'}}
+[2026-03-04 09:46:34] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:34] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:46:34] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475273446505058407/messages with {"content":"Bingo board is ready!","components":[{"type":1,"components":[{"type":2,"style":2,"disabled":false,"label":"-challeneg9-","custom_id":"b432338a0bf95ebfe102147bdbbcd368"},{"type":2,"style":2,"disabled":false,"label":"-challeneg10","custom_id":"f8ffd6b2e74e7aad17611f3702c9a640"},{"type":2,"style":2,"disabled":false,"label":"-challeneg13","custom_id":"2d1a5449f1dcb5d3e148983d8176a749"}]},{"type":1,"components":[{"type":2,"style":2,"disabled":false,"label":"challenege1s","custom_id":"accf6209e4ca648b853d04705984bd86"},{"type":2,"style":2,"disabled":false,"label":"-challeneg7-","custom_id":"bc0810f81fff21ddafcbaa2773a6bc4a"},{"type":2,"style":2,"disabled":false,"label":"-challeneg2-","custom_id":"4774c2e4e8478f0334ad752870bf5d75"}]},{"type":1,"components":[{"type":2,"style":2,"disabled":false,"label":"-challeneg11","custom_id":"8f156d56f79f21e39bba565c89b15ccf"},{"type":2,"style":2,"disabled":false,"label":"-challeneg12","custom_id":"f89bf50a0dcc1accc6eb339c76b1fe61"},{"type":2,"style":2,"disabled":false,"label":"-challeneg15","custom_id":"09087adba2224b4ab25a8d5c2ed2a17b"}]},{"type":1,"components":[{"type":2,"style":2,"disabled":false,"label":"-challeneg6-","custom_id":"3d04860122f56245a3d767535fe365da"},{"type":2,"style":2,"disabled":false,"label":"-challeneg8-","custom_id":"02c58221647f95f5df7eff8a8105132c"},{"type":2,"style":2,"disabled":false,"label":"-challeneg3-","custom_id":"8cafc43837d74b7ed8b21ec0625a3f79"}]},{"type":1,"components":[{"type":2,"style":2,"disabled":false,"label":"-challeneg14","custom_id":"949dd14813113b24051d5276968ff165"},{"type":2,"style":2,"disabled":false,"label":"-challeneg4-","custom_id":"6c43b498ce80e2bde2585ea38b91ca4c"},{"type":2,"style":2,"disabled":false,"label":"-challeneg5-","custom_id":"2a5b3422ca46c30b974a22498153dc85"}]}],"nonce":"5374185337746463972","enforce_nonce":true,"tts":false} has returned 200
+[2026-03-04 09:46:34] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475273446505058407/messages has received {'type': 0, 'content': 'Bingo board is ready!', 'mentions': [], 'mention_roles': [], 'attachments': [], 'embeds': [], 'timestamp': '2026-03-04T15:46:34.905000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [{'type': 1, 'id': 1, 'components': [{'type': 2, 'id': 2, 'custom_id': 'b432338a0bf95ebfe102147bdbbcd368', 'style': 2, 'label': '-challeneg9-'}, {'type': 2, 'id': 3, 'custom_id': 'f8ffd6b2e74e7aad17611f3702c9a640', 'style': 2, 'label': '-challeneg10'}, {'type': 2, 'id': 4, 'custom_id': '2d1a5449f1dcb5d3e148983d8176a749', 'style': 2, 'label': '-challeneg13'}]}, {'type': 1, 'id': 5, 'components': [{'type': 2, 'id': 6, 'custom_id': 'accf6209e4ca648b853d04705984bd86', 'style': 2, 'label': 'challenege1s'}, {'type': 2, 'id': 7, 'custom_id': 'bc0810f81fff21ddafcbaa2773a6bc4a', 'style': 2, 'label': '-challeneg7-'}, {'type': 2, 'id': 8, 'custom_id': '4774c2e4e8478f0334ad752870bf5d75', 'style': 2, 'label': '-challeneg2-'}]}, {'type': 1, 'id': 9, 'components': [{'type': 2, 'id': 10, 'custom_id': '8f156d56f79f21e39bba565c89b15ccf', 'style': 2, 'label': '-challeneg11'}, {'type': 2, 'id': 11, 'custom_id': 'f89bf50a0dcc1accc6eb339c76b1fe61', 'style': 2, 'label': '-challeneg12'}, {'type': 2, 'id': 12, 'custom_id': '09087adba2224b4ab25a8d5c2ed2a17b', 'style': 2, 'label': '-challeneg15'}]}, {'type': 1, 'id': 13, 'components': [{'type': 2, 'id': 14, 'custom_id': '3d04860122f56245a3d767535fe365da', 'style': 2, 'label': '-challeneg6-'}, {'type': 2, 'id': 15, 'custom_id': '02c58221647f95f5df7eff8a8105132c', 'style': 2, 'label': '-challeneg8-'}, {'type': 2, 'id': 16, 'custom_id': '8cafc43837d74b7ed8b21ec0625a3f79', 'style': 2, 'label': '-challeneg3-'}]}, {'type': 1, 'id': 17, 'components': [{'type': 2, 'id': 18, 'custom_id': '949dd14813113b24051d5276968ff165', 'style': 2, 'label': '-challeneg14'}, {'type': 2, 'id': 19, 'custom_id': '6c43b498ce80e2bde2585ea38b91ca4c', 'style': 2, 'label': '-challeneg4-'}, {'type': 2, 'id': 20, 'custom_id': '2a5b3422ca46c30b974a22498153dc85', 'style': 2, 'label': '-challeneg5-'}]}], 'id': '1478780706745352328', 'channel_id': '1475273446505058407', 'author': {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'pinned': False, 'mention_everyone': False, 'tts': False, 'nonce': '5374185337746463972'}
+[2026-03-04 09:46:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 17, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:35.130000+00:00', 'pinned': False, 'nonce': '3001515916411688046', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780707689201756', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'Game started! Check the server channel.', 'components': [], 'channel_type': 1, 'channel_id': '1475499031546302625', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': []}}
+[2026-03-04 09:46:34] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:34] [DEBUG   ] discord.client: Dispatching event message
+[2026-03-04 09:46:34] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages with {"content":"Game started! Check the server channel.","components":[],"nonce":"3001515916411688046","enforce_nonce":true,"tts":false} has returned 200
+[2026-03-04 09:46:34] [DEBUG   ] discord.http: POST https://discord.com/api/v10/channels/1475499031546302625/messages has received {'type': 0, 'content': 'Game started! Check the server channel.', 'mentions': [], 'mention_roles': [], 'attachments': [], 'embeds': [], 'timestamp': '2026-03-04T15:46:35.130000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'id': '1478780707689201756', 'channel_id': '1475499031546302625', 'author': {'id': '1475271757501038715', 'username': 'Bingo-Run', 'avatar': None, 'discriminator': '5124', 'public_flags': 0, 'flags': 0, 'bot': True, 'banner': None, 'accent_color': None, 'global_name': None, 'avatar_decoration_data': None, 'collectibles': None, 'display_name_styles': None, 'banner_color': None, 'clan': None, 'primary_guild': None}, 'pinned': False, 'mention_everyone': False, 'tts': False, 'nonce': '3001515916411688046'}
+[2026-03-04 09:46:34] [DEBUG   ] discord.client: Dispatching event command_completion
+[2026-03-04 09:46:38] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'INTERACTION_CREATE', 's': 18, 'op': 0, 'd': {'version': 1, 'type': 3, 'token': 'aW50ZXJhY3Rpb246MTQ3ODc4MDcyNTI5MjQzNzU0NTpSVmJvYmp2NGdNSjJnQmozVXV5VmdLNUhnaU55YWs3dTM5bHB4TzJuVU9Md29tc3p3Rlo0UXdvbFg1c2dtdEpwbWZpR2dnNmZsNkZkODZWYnN0REUyQUREc0J5WW13MmhZakVjT3IzTllhQWpDaXBwMUR3TTlpRWtiRkJzTEtiTg', 'message': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:34.905000+00:00', 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780706745352328', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'Bingo board is ready!', 'components': [{'type': 1, 'id': 1, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg9-', 'id': 2, 'custom_id': 'b432338a0bf95ebfe102147bdbbcd368'}, {'type': 2, 'style': 2, 'label': '-challeneg10', 'id': 3, 'custom_id': 'f8ffd6b2e74e7aad17611f3702c9a640'}, {'type': 2, 'style': 2, 'label': '-challeneg13', 'id': 4, 'custom_id': '2d1a5449f1dcb5d3e148983d8176a749'}]}, {'type': 1, 'id': 5, 'components': [{'type': 2, 'style': 2, 'label': 'challenege1s', 'id': 6, 'custom_id': 'accf6209e4ca648b853d04705984bd86'}, {'type': 2, 'style': 2, 'label': '-challeneg7-', 'id': 7, 'custom_id': 'bc0810f81fff21ddafcbaa2773a6bc4a'}, {'type': 2, 'style': 2, 'label': '-challeneg2-', 'id': 8, 'custom_id': '4774c2e4e8478f0334ad752870bf5d75'}]}, {'type': 1, 'id': 9, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg11', 'id': 10, 'custom_id': '8f156d56f79f21e39bba565c89b15ccf'}, {'type': 2, 'style': 2, 'label': '-challeneg12', 'id': 11, 'custom_id': 'f89bf50a0dcc1accc6eb339c76b1fe61'}, {'type': 2, 'style': 2, 'label': '-challeneg15', 'id': 12, 'custom_id': '09087adba2224b4ab25a8d5c2ed2a17b'}]}, {'type': 1, 'id': 13, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg6-', 'id': 14, 'custom_id': '3d04860122f56245a3d767535fe365da'}, {'type': 2, 'style': 2, 'label': '-challeneg8-', 'id': 15, 'custom_id': '02c58221647f95f5df7eff8a8105132c'}, {'type': 2, 'style': 2, 'label': '-challeneg3-', 'id': 16, 'custom_id': '8cafc43837d74b7ed8b21ec0625a3f79'}]}, {'type': 1, 'id': 17, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg14', 'id': 18, 'custom_id': '949dd14813113b24051d5276968ff165'}, {'type': 2, 'style': 2, 'label': '-challeneg4-', 'id': 19, 'custom_id': '6c43b498ce80e2bde2585ea38b91ca4c'}, {'type': 2, 'style': 2, 'label': '-challeneg5-', 'id': 20, 'custom_id': '2a5b3422ca46c30b974a22498153dc85'}]}], 'channel_id': '1475273446505058407', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': []}, 'member': {'user': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'discriminator': '0', 'collectibles': None, 'clan': None, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'unusual_dm_activity_until': None, 'roles': [], 'premium_since': None, 'permissions': '9007199254740991', 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:29:58.812000+00:00', 'flags': 0, 'display_name_styles': None, 'deaf': False, 'communication_disabled_until': None, 'collectibles': None, 'banner': None, 'avatar': None}, 'locale': 'en-US', 'id': '1478780725292437545', 'guild_locale': 'en-US', 'guild_id': '1475273445691359334', 'guild': {'locale': 'en-US', 'id': '1475273445691359334', 'features': []}, 'entitlements': [], 'entitlement_sku_ids': [], 'data': {'id': 2, 'custom_id': 'b432338a0bf95ebfe102147bdbbcd368', 'component_type': 2}, 'context': 0, 'channel_id': '1475273446505058407', 'channel': {'type': 0, 'topic': None, 'theme_color': None, 'rate_limit_per_user': 0, 'position': 0, 'permissions': '9007199254740991', 'parent_id': '1475273446505058405', 'nsfw': False, 'name': 'general', 'last_message_id': '1478780706745352328', 'id': '1475273446505058407', 'icon_emoji': {'name': '👋', 'id': None}, 'guild_id': '1475273445691359334', 'flags': 0}, 'authorizing_integration_owners': {'0': '1475273445691359334'}, 'attachment_size_limit': 10485760, 'application_id': '1475271757501038715', 'app_permissions': '4500290459397697'}}
+[2026-03-04 09:46:38] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:38] [DEBUG   ] discord.client: Dispatching event interaction
+[2026-03-04 09:46:39] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_UPDATE', 's': 19, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:34.905000+00:00', 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, 'id': '1478780706745352328', 'flags': 0, 'embeds': [], 'edited_timestamp': '2026-03-04T15:46:39.669552+00:00', 'content': 'Bingo board is ready!', 'components': [{'type': 1, 'id': 1, 'components': [{'type': 2, 'style': 3, 'label': '-challeneg9-', 'id': 2, 'custom_id': 'b432338a0bf95ebfe102147bdbbcd368'}, {'type': 2, 'style': 2, 'label': '-challeneg10', 'id': 3, 'custom_id': 'f8ffd6b2e74e7aad17611f3702c9a640'}, {'type': 2, 'style': 2, 'label': '-challeneg13', 'id': 4, 'custom_id': '2d1a5449f1dcb5d3e148983d8176a749'}]}, {'type': 1, 'id': 5, 'components': [{'type': 2, 'style': 2, 'label': 'challenege1s', 'id': 6, 'custom_id': 'accf6209e4ca648b853d04705984bd86'}, {'type': 2, 'style': 2, 'label': '-challeneg7-', 'id': 7, 'custom_id': 'bc0810f81fff21ddafcbaa2773a6bc4a'}, {'type': 2, 'style': 2, 'label': '-challeneg2-', 'id': 8, 'custom_id': '4774c2e4e8478f0334ad752870bf5d75'}]}, {'type': 1, 'id': 9, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg11', 'id': 10, 'custom_id': '8f156d56f79f21e39bba565c89b15ccf'}, {'type': 2, 'style': 2, 'label': '-challeneg12', 'id': 11, 'custom_id': 'f89bf50a0dcc1accc6eb339c76b1fe61'}, {'type': 2, 'style': 2, 'label': '-challeneg15', 'id': 12, 'custom_id': '09087adba2224b4ab25a8d5c2ed2a17b'}]}, {'type': 1, 'id': 13, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg6-', 'id': 14, 'custom_id': '3d04860122f56245a3d767535fe365da'}, {'type': 2, 'style': 2, 'label': '-challeneg8-', 'id': 15, 'custom_id': '02c58221647f95f5df7eff8a8105132c'}, {'type': 2, 'style': 2, 'label': '-challeneg3-', 'id': 16, 'custom_id': '8cafc43837d74b7ed8b21ec0625a3f79'}]}, {'type': 1, 'id': 17, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg14', 'id': 18, 'custom_id': '949dd14813113b24051d5276968ff165'}, {'type': 2, 'style': 2, 'label': '-challeneg4-', 'id': 19, 'custom_id': '6c43b498ce80e2bde2585ea38b91ca4c'}, {'type': 2, 'style': 2, 'label': '-challeneg5-', 'id': 20, 'custom_id': '2a5b3422ca46c30b974a22498153dc85'}]}], 'channel_type': 0, 'channel_id': '1475273446505058407', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': [], 'guild_id': '1475273445691359334'}}
+[2026-03-04 09:46:39] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:39] [DEBUG   ] discord.client: Dispatching event raw_message_edit
+[2026-03-04 09:46:39] [DEBUG   ] discord.client: Dispatching event message_edit
+[2026-03-04 09:46:39] [DEBUG   ] discord.webhook.async_: Webhook ID 1478780725292437545 with POST https://discord.com/api/v10/interactions/1478780725292437545/aW50ZXJhY3Rpb246MTQ3ODc4MDcyNTI5MjQzNzU0NTpSVmJvYmp2NGdNSjJnQmozVXV5VmdLNUhnaU55YWs3dTM5bHB4TzJuVU9Md29tc3p3Rlo0UXdvbFg1c2dtdEpwbWZpR2dnNmZsNkZkODZWYnN0REUyQUREc0J5WW13MmhZakVjT3IzTllhQWpDaXBwMUR3TTlpRWtiRkJzTEtiTg/callback has returned status code 200
+[2026-03-04 09:46:40] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'INTERACTION_CREATE', 's': 20, 'op': 0, 'd': {'version': 1, 'type': 3, 'token': 'aW50ZXJhY3Rpb246MTQ3ODc4MDczMTI5NDc0NDY2ODpQQmxyWGlnTmtEWEcxRUlacVFSQjd4Umc2bmRWd0pLTklkZ2lhRFd6cno5NXdsUkdyTlJmM1NDZEVBRzBLYmo1WW81dExRZkpuZGtKU1J3RzNmZzRZSUNuS0xwZVBMdml4WFpzY1RvMFpTZWtXME00cWRSTmVnT3FSQ0xRSFo0dA', 'message': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:34.905000+00:00', 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780706745352328', 'flags': 0, 'embeds': [], 'edited_timestamp': '2026-03-04T15:46:39.669000+00:00', 'content': 'Bingo board is ready!', 'components': [{'type': 1, 'id': 1, 'components': [{'type': 2, 'style': 3, 'label': '-challeneg9-', 'id': 2, 'custom_id': 'b432338a0bf95ebfe102147bdbbcd368'}, {'type': 2, 'style': 2, 'label': '-challeneg10', 'id': 3, 'custom_id': 'f8ffd6b2e74e7aad17611f3702c9a640'}, {'type': 2, 'style': 2, 'label': '-challeneg13', 'id': 4, 'custom_id': '2d1a5449f1dcb5d3e148983d8176a749'}]}, {'type': 1, 'id': 5, 'components': [{'type': 2, 'style': 2, 'label': 'challenege1s', 'id': 6, 'custom_id': 'accf6209e4ca648b853d04705984bd86'}, {'type': 2, 'style': 2, 'label': '-challeneg7-', 'id': 7, 'custom_id': 'bc0810f81fff21ddafcbaa2773a6bc4a'}, {'type': 2, 'style': 2, 'label': '-challeneg2-', 'id': 8, 'custom_id': '4774c2e4e8478f0334ad752870bf5d75'}]}, {'type': 1, 'id': 9, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg11', 'id': 10, 'custom_id': '8f156d56f79f21e39bba565c89b15ccf'}, {'type': 2, 'style': 2, 'label': '-challeneg12', 'id': 11, 'custom_id': 'f89bf50a0dcc1accc6eb339c76b1fe61'}, {'type': 2, 'style': 2, 'label': '-challeneg15', 'id': 12, 'custom_id': '09087adba2224b4ab25a8d5c2ed2a17b'}]}, {'type': 1, 'id': 13, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg6-', 'id': 14, 'custom_id': '3d04860122f56245a3d767535fe365da'}, {'type': 2, 'style': 2, 'label': '-challeneg8-', 'id': 15, 'custom_id': '02c58221647f95f5df7eff8a8105132c'}, {'type': 2, 'style': 2, 'label': '-challeneg3-', 'id': 16, 'custom_id': '8cafc43837d74b7ed8b21ec0625a3f79'}]}, {'type': 1, 'id': 17, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg14', 'id': 18, 'custom_id': '949dd14813113b24051d5276968ff165'}, {'type': 2, 'style': 2, 'label': '-challeneg4-', 'id': 19, 'custom_id': '6c43b498ce80e2bde2585ea38b91ca4c'}, {'type': 2, 'style': 2, 'label': '-challeneg5-', 'id': 20, 'custom_id': '2a5b3422ca46c30b974a22498153dc85'}]}], 'channel_id': '1475273446505058407', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': []}, 'member': {'user': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'discriminator': '0', 'collectibles': None, 'clan': None, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'unusual_dm_activity_until': None, 'roles': [], 'premium_since': None, 'permissions': '9007199254740991', 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:29:58.812000+00:00', 'flags': 0, 'display_name_styles': None, 'deaf': False, 'communication_disabled_until': None, 'collectibles': None, 'banner': None, 'avatar': None}, 'locale': 'en-US', 'id': '1478780731294744668', 'guild_locale': 'en-US', 'guild_id': '1475273445691359334', 'guild': {'locale': 'en-US', 'id': '1475273445691359334', 'features': []}, 'entitlements': [], 'entitlement_sku_ids': [], 'data': {'id': 11, 'custom_id': 'f89bf50a0dcc1accc6eb339c76b1fe61', 'component_type': 2}, 'context': 0, 'channel_id': '1475273446505058407', 'channel': {'type': 0, 'topic': None, 'theme_color': None, 'rate_limit_per_user': 0, 'position': 0, 'permissions': '9007199254740991', 'parent_id': '1475273446505058405', 'nsfw': False, 'name': 'general', 'last_message_id': '1478780706745352328', 'id': '1475273446505058407', 'icon_emoji': {'name': '👋', 'id': None}, 'guild_id': '1475273445691359334', 'flags': 0}, 'authorizing_integration_owners': {'0': '1475273445691359334'}, 'attachment_size_limit': 10485760, 'application_id': '1475271757501038715', 'app_permissions': '4500290459397697'}}
+[2026-03-04 09:46:40] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:40] [DEBUG   ] discord.client: Dispatching event interaction
+[2026-03-04 09:46:40] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_UPDATE', 's': 21, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:34.905000+00:00', 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, 'id': '1478780706745352328', 'flags': 0, 'embeds': [], 'edited_timestamp': '2026-03-04T15:46:40.984205+00:00', 'content': 'Bingo board is ready!', 'components': [{'type': 1, 'id': 1, 'components': [{'type': 2, 'style': 3, 'label': '-challeneg9-', 'id': 2, 'custom_id': 'b432338a0bf95ebfe102147bdbbcd368'}, {'type': 2, 'style': 2, 'label': '-challeneg10', 'id': 3, 'custom_id': 'f8ffd6b2e74e7aad17611f3702c9a640'}, {'type': 2, 'style': 2, 'label': '-challeneg13', 'id': 4, 'custom_id': '2d1a5449f1dcb5d3e148983d8176a749'}]}, {'type': 1, 'id': 5, 'components': [{'type': 2, 'style': 2, 'label': 'challenege1s', 'id': 6, 'custom_id': 'accf6209e4ca648b853d04705984bd86'}, {'type': 2, 'style': 2, 'label': '-challeneg7-', 'id': 7, 'custom_id': 'bc0810f81fff21ddafcbaa2773a6bc4a'}, {'type': 2, 'style': 2, 'label': '-challeneg2-', 'id': 8, 'custom_id': '4774c2e4e8478f0334ad752870bf5d75'}]}, {'type': 1, 'id': 9, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg11', 'id': 10, 'custom_id': '8f156d56f79f21e39bba565c89b15ccf'}, {'type': 2, 'style': 3, 'label': '-challeneg12', 'id': 11, 'custom_id': 'f89bf50a0dcc1accc6eb339c76b1fe61'}, {'type': 2, 'style': 2, 'label': '-challeneg15', 'id': 12, 'custom_id': '09087adba2224b4ab25a8d5c2ed2a17b'}]}, {'type': 1, 'id': 13, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg6-', 'id': 14, 'custom_id': '3d04860122f56245a3d767535fe365da'}, {'type': 2, 'style': 2, 'label': '-challeneg8-', 'id': 15, 'custom_id': '02c58221647f95f5df7eff8a8105132c'}, {'type': 2, 'style': 2, 'label': '-challeneg3-', 'id': 16, 'custom_id': '8cafc43837d74b7ed8b21ec0625a3f79'}]}, {'type': 1, 'id': 17, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg14', 'id': 18, 'custom_id': '949dd14813113b24051d5276968ff165'}, {'type': 2, 'style': 2, 'label': '-challeneg4-', 'id': 19, 'custom_id': '6c43b498ce80e2bde2585ea38b91ca4c'}, {'type': 2, 'style': 2, 'label': '-challeneg5-', 'id': 20, 'custom_id': '2a5b3422ca46c30b974a22498153dc85'}]}], 'channel_type': 0, 'channel_id': '1475273446505058407', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': [], 'guild_id': '1475273445691359334'}}
+[2026-03-04 09:46:40] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:40] [DEBUG   ] discord.client: Dispatching event raw_message_edit
+[2026-03-04 09:46:40] [DEBUG   ] discord.client: Dispatching event message_edit
+[2026-03-04 09:46:40] [DEBUG   ] discord.webhook.async_: Webhook ID 1478780731294744668 with POST https://discord.com/api/v10/interactions/1478780731294744668/aW50ZXJhY3Rpb246MTQ3ODc4MDczMTI5NDc0NDY2ODpQQmxyWGlnTmtEWEcxRUlacVFSQjd4Umc2bmRWd0pLTklkZ2lhRFd6cno5NXdsUkdyTlJmM1NDZEVBRzBLYmo1WW81dExRZkpuZGtKU1J3RzNmZzRZSUNuS0xwZVBMdml4WFpzY1RvMFpTZWtXME00cWRSTmVnT3FSQ0xRSFo0dA/callback has returned status code 200
+[2026-03-04 09:46:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'INTERACTION_CREATE', 's': 22, 'op': 0, 'd': {'version': 1, 'type': 3, 'token': 'aW50ZXJhY3Rpb246MTQ3ODc4MDc0MTcwMDgxNzAxNzpETkhZVzYyWXhmcVVMUVoxRGJHcFhQcFRZZzhmU25wdHJyQVpBZ1VpNkxVV0NYb2Y3RG8wQnRlaTZxTmZMUDduQ01xWTk1UnhCb05CdU1xYW1HbWNkRnZySnYxcDFDZHVJeG92N3owUXFaUTdFeDc0STJPVW1IMGc5dm5rVkh1TA', 'message': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:34.905000+00:00', 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '1478780706745352328', 'flags': 0, 'embeds': [], 'edited_timestamp': '2026-03-04T15:46:40.984000+00:00', 'content': 'Bingo board is ready!', 'components': [{'type': 1, 'id': 1, 'components': [{'type': 2, 'style': 3, 'label': '-challeneg9-', 'id': 2, 'custom_id': 'b432338a0bf95ebfe102147bdbbcd368'}, {'type': 2, 'style': 2, 'label': '-challeneg10', 'id': 3, 'custom_id': 'f8ffd6b2e74e7aad17611f3702c9a640'}, {'type': 2, 'style': 2, 'label': '-challeneg13', 'id': 4, 'custom_id': '2d1a5449f1dcb5d3e148983d8176a749'}]}, {'type': 1, 'id': 5, 'components': [{'type': 2, 'style': 2, 'label': 'challenege1s', 'id': 6, 'custom_id': 'accf6209e4ca648b853d04705984bd86'}, {'type': 2, 'style': 2, 'label': '-challeneg7-', 'id': 7, 'custom_id': 'bc0810f81fff21ddafcbaa2773a6bc4a'}, {'type': 2, 'style': 2, 'label': '-challeneg2-', 'id': 8, 'custom_id': '4774c2e4e8478f0334ad752870bf5d75'}]}, {'type': 1, 'id': 9, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg11', 'id': 10, 'custom_id': '8f156d56f79f21e39bba565c89b15ccf'}, {'type': 2, 'style': 3, 'label': '-challeneg12', 'id': 11, 'custom_id': 'f89bf50a0dcc1accc6eb339c76b1fe61'}, {'type': 2, 'style': 2, 'label': '-challeneg15', 'id': 12, 'custom_id': '09087adba2224b4ab25a8d5c2ed2a17b'}]}, {'type': 1, 'id': 13, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg6-', 'id': 14, 'custom_id': '3d04860122f56245a3d767535fe365da'}, {'type': 2, 'style': 2, 'label': '-challeneg8-', 'id': 15, 'custom_id': '02c58221647f95f5df7eff8a8105132c'}, {'type': 2, 'style': 2, 'label': '-challeneg3-', 'id': 16, 'custom_id': '8cafc43837d74b7ed8b21ec0625a3f79'}]}, {'type': 1, 'id': 17, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg14', 'id': 18, 'custom_id': '949dd14813113b24051d5276968ff165'}, {'type': 2, 'style': 2, 'label': '-challeneg4-', 'id': 19, 'custom_id': '6c43b498ce80e2bde2585ea38b91ca4c'}, {'type': 2, 'style': 2, 'label': '-challeneg5-', 'id': 20, 'custom_id': '2a5b3422ca46c30b974a22498153dc85'}]}], 'channel_id': '1475273446505058407', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': []}, 'member': {'user': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'discriminator': '0', 'collectibles': None, 'clan': None, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'unusual_dm_activity_until': None, 'roles': [], 'premium_since': None, 'permissions': '9007199254740991', 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:29:58.812000+00:00', 'flags': 0, 'display_name_styles': None, 'deaf': False, 'communication_disabled_until': None, 'collectibles': None, 'banner': None, 'avatar': None}, 'locale': 'en-US', 'id': '1478780741700817017', 'guild_locale': 'en-US', 'guild_id': '1475273445691359334', 'guild': {'locale': 'en-US', 'id': '1475273445691359334', 'features': []}, 'entitlements': [], 'entitlement_sku_ids': [], 'data': {'id': 19, 'custom_id': '6c43b498ce80e2bde2585ea38b91ca4c', 'component_type': 2}, 'context': 0, 'channel_id': '1475273446505058407', 'channel': {'type': 0, 'topic': None, 'theme_color': None, 'rate_limit_per_user': 0, 'position': 0, 'permissions': '9007199254740991', 'parent_id': '1475273446505058405', 'nsfw': False, 'name': 'general', 'last_message_id': '1478780706745352328', 'id': '1475273446505058407', 'icon_emoji': {'name': '👋', 'id': None}, 'guild_id': '1475273445691359334', 'flags': 0}, 'authorizing_integration_owners': {'0': '1475273445691359334'}, 'attachment_size_limit': 10485760, 'application_id': '1475271757501038715', 'app_permissions': '4500290459397697'}}
+[2026-03-04 09:46:42] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:42] [DEBUG   ] discord.client: Dispatching event interaction
+[2026-03-04 09:46:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_UPDATE', 's': 23, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2026-03-04T15:46:34.905000+00:00', 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, 'id': '1478780706745352328', 'flags': 0, 'embeds': [], 'edited_timestamp': '2026-03-04T15:46:43.593119+00:00', 'content': 'Bingo board is ready!', 'components': [{'type': 1, 'id': 1, 'components': [{'type': 2, 'style': 3, 'label': '-challeneg9-', 'id': 2, 'custom_id': 'b432338a0bf95ebfe102147bdbbcd368'}, {'type': 2, 'style': 2, 'label': '-challeneg10', 'id': 3, 'custom_id': 'f8ffd6b2e74e7aad17611f3702c9a640'}, {'type': 2, 'style': 2, 'label': '-challeneg13', 'id': 4, 'custom_id': '2d1a5449f1dcb5d3e148983d8176a749'}]}, {'type': 1, 'id': 5, 'components': [{'type': 2, 'style': 2, 'label': 'challenege1s', 'id': 6, 'custom_id': 'accf6209e4ca648b853d04705984bd86'}, {'type': 2, 'style': 2, 'label': '-challeneg7-', 'id': 7, 'custom_id': 'bc0810f81fff21ddafcbaa2773a6bc4a'}, {'type': 2, 'style': 2, 'label': '-challeneg2-', 'id': 8, 'custom_id': '4774c2e4e8478f0334ad752870bf5d75'}]}, {'type': 1, 'id': 9, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg11', 'id': 10, 'custom_id': '8f156d56f79f21e39bba565c89b15ccf'}, {'type': 2, 'style': 3, 'label': '-challeneg12', 'id': 11, 'custom_id': 'f89bf50a0dcc1accc6eb339c76b1fe61'}, {'type': 2, 'style': 2, 'label': '-challeneg15', 'id': 12, 'custom_id': '09087adba2224b4ab25a8d5c2ed2a17b'}]}, {'type': 1, 'id': 13, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg6-', 'id': 14, 'custom_id': '3d04860122f56245a3d767535fe365da'}, {'type': 2, 'style': 2, 'label': '-challeneg8-', 'id': 15, 'custom_id': '02c58221647f95f5df7eff8a8105132c'}, {'type': 2, 'style': 2, 'label': '-challeneg3-', 'id': 16, 'custom_id': '8cafc43837d74b7ed8b21ec0625a3f79'}]}, {'type': 1, 'id': 17, 'components': [{'type': 2, 'style': 2, 'label': '-challeneg14', 'id': 18, 'custom_id': '949dd14813113b24051d5276968ff165'}, {'type': 2, 'style': 3, 'label': '-challeneg4-', 'id': 19, 'custom_id': '6c43b498ce80e2bde2585ea38b91ca4c'}, {'type': 2, 'style': 2, 'label': '-challeneg5-', 'id': 20, 'custom_id': '2a5b3422ca46c30b974a22498153dc85'}]}], 'channel_type': 0, 'channel_id': '1475273446505058407', 'author': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'discriminator': '5124', 'collectibles': None, 'clan': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'attachments': [], 'guild_id': '1475273445691359334'}}
+[2026-03-04 09:46:42] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 09:46:42] [DEBUG   ] discord.client: Dispatching event raw_message_edit
+[2026-03-04 09:46:42] [DEBUG   ] discord.client: Dispatching event message_edit
+[2026-03-04 09:46:42] [DEBUG   ] discord.webhook.async_: Webhook ID 1478780741700817017 with POST https://discord.com/api/v10/interactions/1478780741700817017/aW50ZXJhY3Rpb246MTQ3ODc4MDc0MTcwMDgxNzAxNzpETkhZVzYyWXhmcVVMUVoxRGJHcFhQcFRZZzhmU25wdHJyQVpBZ1VpNkxVV0NYb2Y3RG8wQnRlaTZxTmZMUDduQ01xWTk1UnhCb05CdU1xYW1HbWNkRnZySnYxcDFDZHVJeG92N3owUXFaUTdFeDc0STJPVW1IMGc5dm5rVkh1TA/callback has returned status code 200
+[2026-03-04 09:47:03] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 23.
+[2026-03-04 09:47:03] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 09:47:28] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 1, 'd': None}
+[2026-03-04 09:47:28] [DEBUG   ] discord.gateway: Received WSMessage(type=<WSMsgType.CLOSE: 8>, data=1000, extra='')
+[2026-03-04 09:47:28] [DEBUG   ] discord.gateway: Websocket closed with 1000, attempting a reconnect.
+[2026-03-04 09:47:28] [DEBUG   ] discord.client: Got a request to RESUME the websocket.
+[2026-03-04 09:47:28] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 09:47:30] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 09:47:30] [ERROR   ] discord.client: Attempting a reconnect in 0.19s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/resolver.py", line 117, in resolve
+    resp = await self._resolver.getaddrinfo(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+aiodns.error.DNSError: (12, 'Timeout while contacting DNS servers')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1178, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1209, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/resolver.py", line 126, in resolve
+    raise OSError(None, msg) from exc
+OSError: [Errno None] Timeout while contacting DNS servers
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1568, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-b.discord.gg:443 ssl:default [Timeout while contacting DNS servers]
+[2026-03-04 18:32:48] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 18:32:48] [ERROR   ] discord.client: Attempting a reconnect in 3.64s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1178, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 18:33:52] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 18:33:52] [ERROR   ] discord.client: Attempting a reconnect in 5.24s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 18:34:57] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 18:34:57] [ERROR   ] discord.client: Attempting a reconnect in 11.98s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 18:36:09] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 18:36:09] [ERROR   ] discord.client: Attempting a reconnect in 31.28s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 18:37:41] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 18:37:41] [ERROR   ] discord.client: Attempting a reconnect in 56.04s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 18:39:37] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 18:39:37] [ERROR   ] discord.client: Attempting a reconnect in 13.27s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 18:40:50] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 18:40:50] [ERROR   ] discord.client: Attempting a reconnect in 153.49s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 18:44:24] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 18:44:24] [ERROR   ] discord.client: Attempting a reconnect in 257.24s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 18:49:41] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 18:49:41] [ERROR   ] discord.client: Attempting a reconnect in 828.15s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 19:04:29] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 19:04:29] [ERROR   ] discord.client: Attempting a reconnect in 362.18s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 19:11:32] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 19:11:32] [ERROR   ] discord.client: Attempting a reconnect in 464.27s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 19:30:08] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 19:30:08] [ERROR   ] discord.client: Attempting a reconnect in 962.50s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 19:47:10] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 19:47:10] [ERROR   ] discord.client: Attempting a reconnect in 816.78s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 20:01:47] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 20:01:47] [ERROR   ] discord.client: Attempting a reconnect in 11.20s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 20:02:58] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 20:02:58] [ERROR   ] discord.client: Attempting a reconnect in 279.85s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 20:08:38] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 20:08:38] [ERROR   ] discord.client: Attempting a reconnect in 950.23s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 20:25:29] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 20:25:29] [ERROR   ] discord.client: Attempting a reconnect in 800.64s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 20:39:50] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 20:39:50] [ERROR   ] discord.client: Attempting a reconnect in 695.36s
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/gateway.py", line 383, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/http.py", line 566, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1562, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/aiohttp/connector.py", line 1153, in _resolve_host
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/site-packages/discord/client.py", line 724, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/nix/store/nwczshbbb59yv4kf3fa0d4aznjdkz098-python3-3.13.11-env/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+[2026-03-04 21:11:41] [DEBUG   ] discord.gateway: Created websocket connected to wss://gateway-us-east1-b.discord.gg
+[2026-03-04 21:11:41] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-arm-us-east1-b-tmwn",{"micros":0.0}]']}}
+[2026-03-04 21:11:41] [DEBUG   ] discord.gateway: Shard ID None has sent the RESUME payload.
+[2026-03-04 21:11:41] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:11:41] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 9, 'd': False}
+[2026-03-04 21:11:41] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2026-03-04 21:11:41] [DEBUG   ] discord.client: Got a request to IDENTIFY the websocket.
+[2026-03-04 21:11:41] [DEBUG   ] discord.client: Dispatching event disconnect
+[2026-03-04 21:11:41] [DEBUG   ] discord.gateway: Created websocket connected to wss://gateway-us-east1-b.discord.gg
+[2026-03-04 21:11:41] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-arm-us-east1-b-6sc7",{"micros":0.0}]']}}
+[2026-03-04 21:11:46] [DEBUG   ] discord.gateway: Shard ID None has sent the IDENTIFY payload.
+[2026-03-04 21:11:46] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:11:46] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'READY', 's': 1, 'op': 0, 'd': {'v': 10, 'user_settings': {}, 'user': {'verified': True, 'username': 'Bingo-Run', 'primary_guild': None, 'mfa_enabled': False, 'id': '1475271757501038715', 'global_name': None, 'flags': 0, 'email': None, 'discriminator': '5124', 'clan': None, 'bot': True, 'avatar': None}, 'session_type': 'normal', 'session_id': '92b4118a8974822625ce535fd181a8fb', 'resume_gateway_url': 'wss://gateway-us-east1-b.discord.gg', 'relationships': [], 'private_channels': [], 'presences': [], 'guilds': [{'unavailable': True, 'id': '1475273445691359334'}], 'guild_join_requests': [], 'geo_ordered_rtc_regions': ['us-central', 'us-south', 'us-east', 'atlanta', 'newark'], 'game_relationships': [], 'auth': {}, 'application': {'id': '1475271757501038715', 'flags_new': '565248', 'flags': 565248}, '_trace': ['["gateway-prd-arm-us-east1-b-6sc7",{"micros":207655,"calls":["id_created",{"micros":344,"calls":[]},"session_lookup_time",{"micros":4392,"calls":[]},"session_lookup_finished",{"micros":11,"calls":[]},"discord-sessions-prd-2-199",{"micros":202062,"calls":["start_session",{"micros":180365,"calls":["discord-api-rpc-5dcb459576-tq7tp",{"micros":78559,"calls":["get_user",{"micros":7251},"get_guilds",{"micros":5980},"send_scheduled_deletion_message",{"micros":13},"guild_join_requests",{"micros":212},"authorized_ip_coro",{"micros":20},"pending_payments",{"micros":1658},"apex_experiments",{"micros":89892},"sessions_experiments",{"micros":7},"user_activities",{"micros":22},"played_application_ids",{"micros":5},"linked_users",{"micros":3},"ad_personalization_toggles_disabled",{"micros":3},"regional_feature_config",{"micros":4}]}]},"starting_guild_connect",{"micros":27,"calls":[]},"presence_started",{"micros":338,"calls":[]},"guilds_started",{"micros":53,"calls":[]},"lobbies_started",{"micros":1,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":21249,"calls":[]},"connect_finished",{"micros":21263,"calls":[]},"build_ready",{"micros":11,"calls":[]},"clean_ready",{"micros":2,"calls":[]},"optimize_ready",{"micros":1,"calls":[]},"split_ready",{"micros":0,"calls":[]}]}]}]']}}
+[2026-03-04 21:11:46] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 21:11:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 92b4118a8974822625ce535fd181a8fb).
+[2026-03-04 21:11:46] [DEBUG   ] discord.client: Dispatching event connect
+[2026-03-04 21:11:46] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_CREATE', 's': 2, 'op': 0, 'd': {'activity_instances': [], 'explicit_content_filter': 0, 'unavailable': False, 'moderator_reporting': None, 'incidents_data': None, 'discovery_splash': None, 'lazy': True, 'stage_instances': [], 'members': [{'user': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'display_name': None, 'discriminator': '5124', 'collectibles': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}], 'emojis': [], 'afk_channel_id': None, 'profile': None, 'presences': [], 'roles': [{'version': 1771802998898, 'unicode_emoji': None, 'tags': {}, 'position': 0, 'permissions': '2248473465835073', 'name': '@everyone', 'mentionable': False, 'managed': False, 'id': '1475273445691359334', 'icon': None, 'hoist': False, 'flags': 0, 'colors': {'tertiary_color': None, 'secondary_color': None, 'primary_color': 0}, 'color': 0}, {'version': 1771803064031, 'unicode_emoji': None, 'tags': {'bot_id': '1475271757501038715'}, 'position': 1, 'permissions': '2251920072895488', 'name': 'Bingo-Run', 'mentionable': False, 'managed': True, 'id': '1475273675761782900', 'icon': None, 'hoist': False, 'flags': 0, 'colors': {'tertiary_color': None, 'secondary_color': None, 'primary_color': 0}, 'color': 0}], 'channels': [{'version': 1771802998905, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Text Channels', 'id': '1475273446505058405', 'flags': 0}, {'version': 1771802998914, 'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Voice Channels', 'id': '1475273446505058406', 'flags': 0}, {'version': 1771802998923, 'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1475273446505058405', 'name': 'general', 'last_message_id': '1478780706745352328', 'id': '1475273446505058407', 'icon_emoji': {'name': '👋', 'id': None}, 'flags': 0}, {'version': 1771802998930, 'user_limit': 0, 'type': 2, 'rtc_region': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '1475273446505058406', 'name': 'General', 'last_message_id': None, 'id': '1475273446505058408', 'icon_emoji': {'name': '🎙', 'id': None}, 'flags': 0, 'bitrate': 64000}], 'id': '1475273445691359334', 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'name': 'test_bot_server', 'large': False, 'guild_scheduled_events': [], 'region': 'deprecated', 'threads': [], 'afk_timeout': 300, 'voice_states': [], 'system_channel_id': '1475273446505058407', 'preferred_locale': 'en-US', 'safety_alerts_channel_id': None, 'banner': None, 'description': None, 'hub_type': None, 'vanity_url_code': None, 'premium_progress_bar_enabled': False, 'premium_features': None, 'nsfw': False, 'premium_tier': 0, 'latest_onboarding_question_id': None, 'application_id': None, 'home_header': None, 'owner_id': '566083012928733224', 'max_video_channel_users': 25, 'mfa_level': 0, 'splash': None, 'premium_subscription_count': 0, 'owner_configured_content_level': 0, 'public_updates_channel_id': None, 'features': [], 'application_command_counts': {}, 'system_channel_flags': 0, 'nsfw_level': 0, 'premium_progress_bar_enabled_user_updated_at': None, 'max_members': 25000000, 'inventory_settings': None, 'soundboard_sounds': [], 'member_count': 3, 'icon': None, 'verification_level': 0, 'max_stage_video_channel_users': 50, 'version': 1771802998935, 'rules_channel_id': None, 'embedded_activities': [], 'stickers': [], 'default_message_notifications': 0}}
+[2026-03-04 21:11:46] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 21:11:47] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_MEMBERS_CHUNK', 's': 3, 'op': 0, 'd': {'nonce': 'c9a7e2dab21f538e685307c20499205e', 'members': [{'user': {'username': 'loremafore', 'public_flags': 0, 'primary_guild': None, 'id': '566083012928733224', 'global_name': 'Lore', 'display_name_styles': None, 'display_name': 'Lore', 'discriminator': '0', 'collectibles': None, 'bot': False, 'avatar_decoration_data': None, 'avatar': 'aeefa84d4a3d97a7ffb6497305bbe5b7'}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:29:58.812000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, {'user': {'username': 'conradbot0083', 'public_flags': 0, 'primary_guild': None, 'id': '699317005282705559', 'global_name': 'ConradBot', 'display_name_styles': None, 'display_name': 'ConradBot', 'discriminator': '0', 'collectibles': None, 'bot': False, 'avatar_decoration_data': None, 'avatar': None}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-03-01T23:33:41.194000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}, {'user': {'username': 'Bingo-Run', 'public_flags': 0, 'primary_guild': None, 'id': '1475271757501038715', 'global_name': None, 'display_name_styles': None, 'display_name': None, 'discriminator': '5124', 'collectibles': None, 'bot': True, 'avatar_decoration_data': None, 'avatar': None}, 'roles': ['1475273675761782900'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2026-02-22T23:30:53.699000+00:00', 'flags': 0, 'deaf': False, 'communication_disabled_until': None, 'banner': None, 'avatar': None}], 'guild_id': '1475273445691359334', 'chunk_index': 0, 'chunk_count': 1}}
+[2026-03-04 21:11:47] [DEBUG   ] discord.client: Dispatching event socket_event_type
+[2026-03-04 21:11:47] [DEBUG   ] discord.state: Processed a chunk for 3 members in guild ID 1475273445691359334.
+[2026-03-04 21:11:48] [DEBUG   ] discord.client: Dispatching event guild_available
+[2026-03-04 21:11:48] [DEBUG   ] discord.client: Dispatching event ready
+[2026-03-04 21:12:22] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:12:22] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:13:04] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:13:04] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:13:45] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:13:45] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:14:26] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:14:26] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:15:07] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:15:07] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:15:49] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:15:49] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:16:30] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:16:30] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:17:11] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:17:11] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:17:52] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:17:53] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:18:34] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:18:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:19:15] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:19:15] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:19:56] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:19:56] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:20:37] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:20:38] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:21:19] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:21:19] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:22:00] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:22:00] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:22:41] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:22:41] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:23:22] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:23:23] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:24:04] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:24:04] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:24:45] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:24:45] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:25:26] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:25:26] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:26:08] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:26:08] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:26:49] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:26:49] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:27:30] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:27:30] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:28:11] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:28:11] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:28:53] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:28:53] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:29:34] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:29:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:30:15] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:30:15] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:30:56] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:30:56] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:31:38] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:31:38] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:32:19] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:32:19] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:33:00] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:33:00] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:33:41] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:33:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:34:23] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:34:23] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:35:04] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:35:04] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:35:45] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:35:45] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:36:26] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:36:27] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:37:08] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:37:08] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:37:49] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:37:49] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:38:30] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:38:30] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:39:11] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:39:12] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:39:53] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:39:53] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:40:34] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:40:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:41:15] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:41:15] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:41:56] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:41:57] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:42:38] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:42:38] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:43:19] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:43:19] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:44:00] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:44:00] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:44:41] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:44:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:45:23] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:45:23] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:46:04] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:46:04] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:46:45] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:46:45] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:47:27] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:47:27] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:48:08] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:48:08] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:48:49] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:48:49] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:49:30] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:49:30] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:50:12] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:50:12] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:50:53] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:50:53] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:51:34] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:51:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:52:15] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:52:15] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:52:57] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:52:57] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:53:38] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:53:38] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:54:19] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:54:19] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:55:00] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:55:00] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:55:42] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:55:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:56:23] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:56:23] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:57:04] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:57:04] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:57:45] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:57:45] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:58:27] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:58:27] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:59:08] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:59:08] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 21:59:49] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 21:59:49] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:00:30] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:00:30] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:01:12] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:01:12] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:01:53] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:01:53] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:02:34] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:02:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:03:15] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:03:15] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:03:57] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:03:57] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:04:38] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:04:38] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:05:19] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:05:19] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:06:00] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:06:00] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:06:42] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:06:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:07:23] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:07:23] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:08:04] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:08:04] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:08:45] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:08:46] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:09:27] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:09:27] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:10:08] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:10:08] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:10:49] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:10:49] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:11:30] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:11:31] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:12:12] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:12:12] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:12:53] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:12:53] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:13:34] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:13:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:14:15] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:14:16] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:14:57] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:14:57] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:15:38] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:15:38] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:16:19] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:16:19] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:17:01] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:17:01] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:17:42] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:17:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:18:23] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:18:23] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:19:04] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:19:04] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:19:46] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:19:46] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:20:27] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:20:27] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:21:08] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:21:08] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:21:49] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:21:49] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:22:31] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:22:31] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:23:12] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:23:12] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:23:53] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:23:53] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:24:34] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:24:34] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:25:16] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:25:16] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:25:57] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:25:57] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:26:38] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:26:38] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:27:19] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:27:19] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:28:01] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:28:01] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:28:42] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:28:42] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+[2026-03-04 22:29:23] [DEBUG   ] discord.gateway: Keeping shard ID None websocket alive with sequence 3.
+[2026-03-04 22:29:23] [DEBUG   ] discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
