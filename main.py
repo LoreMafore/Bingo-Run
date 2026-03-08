@@ -151,12 +151,29 @@ async def new_game(ctx):
     server_id = ctx.guild.id
     channel_id = ctx.channel.id
 
-    print(user_id)
-    USER_IDS[user_id] = Ids(server_id, channel_id)
-    USER_CONFIGS[user_id] = BingoRunConfig_c()
-    print(USER_IDS[user_id])
+    if user_id not in USER_CONFIGS:
+        await ctx.author.send("You currently have a game in progress. Do end_game! to finish your game.")
+
+    else:
+        USER_IDS[user_id] = Ids(server_id, channel_id)
+        USER_CONFIGS[user_id] = BingoRunConfig_c()
 
     await ctx.author.send(f"Send !info to learn how to start the game")
+
+
+@bot.command(name='end_game')
+@commands.guild_only()
+async def end_game(ctx):
+    user_id = ctx.author.id 
+
+    if user_id in USER_CONFIGS:
+        del USER_CONFIGS[user_id]
+        del USER_IDS[user_id]
+        await ctx.author.send("Your game finished!")
+
+    else:
+        await ctx.author.send("You do not have an active game")
+
 
 @bot.command(name='info')
 async def info(ctx):
@@ -177,17 +194,19 @@ async def info(ctx):
                 "then I will make a board for you. We will need list of "
                 "challenges, a board size, and list of players.\n\n"
                 "To set a list do the following: \n"
-                "!set_list [\"challange1\", \"challenge2\"]\n"
+                "!challenges challeneg1,challeneg2 \n"
                 "or\n"
-                "!set_list challenge.csv (where you uploaded the csv)\n\n"
                 "To set the size of the board do the following: \n"
                 "!board_size 5 5\n"
                 "This will give you a 5x5 board\n\n"
                 "To set who can play the game and which color they will be assigned to do the following: \n"
                 "!set_players 123456789 red, 987654321 green\n"
                 "or\n"
-                "!set_players players.csv (where you uploaded the csv)\n\n"
                 "To see all colors do !colors\n\n"
+                "You can set a new game by using !load and uploading a csv file like\n"
+                "board, 3, 5\n"
+                "players, 566083012928733224 green, 699317005282705559 red\n"
+                "challenges, challenege1s,challeneg2board, 3, 5\n"
                 "To start the game enter !start.\n"
                 "For any more commands do !commands"
             )
@@ -209,31 +228,27 @@ async def bot_commands(ctx):
                 "!start - Starts the game if you have entered players, box size and a list of challenges."
                 "!commands - Send a list of all commands and their descriptions \n"
                 "!challenges args - gives the bot a list of challenges"
-                "!challenges csv - gives the bot a csv with a list lof challenges"
                 "!board_size args - sets the size of the board"
                 "!players args - gives the bot a list of player_id's(121543210987654321) and their colors. Max three teams"
-                "!players csv - gives the bot a csv with a list of players and colors"
                 "!colors - red, green, blurple"
-                "!save"
-                "!load"
-                "!all_info"
-                "!example - list an example of different commands"
-                "!help"
+                "!save - save a csv - not emplmented"
+                "!load - load a csv"
+                "!example - list an example of different commands - not implmented"
             )
 
 
 #Dm Commands
-@bot.command(name='all_info')
-@commands.dm_only()
-async def display_info(ctx):
-    try:
-        user_id = ctx.author.id
-        print(USER_CONFIGS[user_id])
-
-    except Exception as e:
-        print(f"An error occured: {e}")
-        await ctx.send("Before seeing info you have to start a new game")
-        return None
+# @bot.command(name='all_info')
+# @commands.dm_only()
+# async def display_info(ctx):
+#     try:
+#         user_id = ctx.author.id
+#         print(USER_CONFIGS[user_id])
+#
+#     except Exception as e:
+#         print(f"An error occured: {e}")
+#         await ctx.send("Before seeing info you have to start a new game")
+#         return None
 
 
 @bot.command(name='board_size')
@@ -452,6 +467,12 @@ async def load_config(ctx):
         await ctx.send(f"An error occurred: {e}")
 
 
+# @bot.command(name='save')
+# @commands.dm_only()
+# async def start_game(ctx):
+#     user_id = ctx.author.id
+
+
 @bot.command(name='start')
 @commands.dm_only()
 async def start_game(ctx):
@@ -478,7 +499,6 @@ async def start_game(ctx):
 
         await channel.send("Bingo board is ready!", view=view)
         await ctx.send("Game started! Check the server channel.")
-
 
     except Exception as e:
         print(f"An error occured: {e}")
