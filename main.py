@@ -151,7 +151,7 @@ async def new_game(ctx):
     server_id = ctx.guild.id
     channel_id = ctx.channel.id
 
-    if user_id not in USER_CONFIGS:
+    if user_id in USER_CONFIGS:
         await ctx.author.send("You currently have a game in progress. Do end_game! to finish your game.")
 
     else:
@@ -218,8 +218,8 @@ async def bot_commands(ctx):
         await ctx.send(
             "!info - Sends a summary of how Bingo-Run works\n" 
             "!commands - Send a list of all commands and their descriptions \n"
-            "!new_game - Starts a new game and sends a dm for configuration"
-            "!help"
+            "!new_game - Starts a new game and sends a dm for configuration \n"
+            "!end_game - To end game"
         )
 
     else:
@@ -408,27 +408,34 @@ async def load_config(ctx):
 
             elif keyword == 'players':
                 player_entries = parts[1:]
-
                 for i, entry in enumerate(player_entries):
                     player_info = entry.strip().split()
+                    
+                    if len(player_info) == 0:
+                        continue  # Skip empty entries from extra delimiters
+                    
                     if len(player_info) != 2:
                         await ctx.send(f"Player {i+1} format is wrong. Expected: `id color`")
                         return
-
-                    player_id = int(player_info[0])
-                    color = player_info[1]
+                    
+                    player_id_str, color = player_info[0], player_info[1]
+                    
+                    if not player_id_str.isdigit():
+                        await ctx.send(f"Player {i+1}'s ID must be a number")
+                        return
+                    
+                    player_id = int(player_id_str)
                     is_id = await checkId(player_id)
                     is_color = checkColor(color)
-
+                    
                     if is_id and is_color:
                         USER_CONFIGS[user_id].player_dic[i+1] = [player_id, color]
                     elif not is_id:
                         await ctx.send(f"Player {i+1}'s ID is not valid")
                     elif not is_color:
                         await ctx.send(f"Player {i+1}'s color is not valid")
-
+                
                 await ctx.send(f"Players set: {USER_CONFIGS[user_id].player_dic}")
-
             elif keyword == 'challenges':
                 if len(USER_CONFIGS[user_id].size) == 0:
                     await ctx.send("Board size must be set before challenges. Make sure your CSV has a `board` line before `challenges`")
