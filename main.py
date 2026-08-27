@@ -478,24 +478,11 @@ async def load_config(ctx):
                     return
 
                 longest_challenge: int = max(len(challenge) for challenge in challenge_list)
-                temp_dash_name= "-" * longest_challenge
-                dash_first_half = temp_dash_name[:mid]
-                # total_size = len(altered_var) / 2
-                total_size: int = int(longest_challenge / 2)
-                altered_challenge_list: list[str] = []
 
-                for challenge in challenge_list:
-                    temp = temp_dash_name
-                    # size = len(challenge)
-                    mid = int(longest_challenge / 2)
-
-                    word_first_half = challenge[:mid]
-                    word_second_half = challenge[mid:]
-
-                    start_pos_first: int = len(dash_first_half) - len(word_first_half)
-
-                    temp = temp[:start_pos_first] + word_first_half +word_second_half
-                    altered_challenge_list.append(temp)
+                altered_challenge_list: list[str] = [
+                    challenge.center(longest_challenge, "-")
+                    for challenge in challenge_list
+                ]
 
                 USER_CONFIGS[user_id].challenge_list = altered_challenge_list
                 await ctx.send(f"Challenges set!")
