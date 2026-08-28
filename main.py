@@ -304,25 +304,11 @@ async def set_challenges(ctx, *, data: str):
             )
             return
 
-        altered_challenge_list: list = []
-        altered_var: str = ""
-        longest_word: int = 0
+        longest_word: int = max(len(c) for c in challenge_list)
 
-        longest_word = max(len(c) for c in challenge_list)
-        altered_var = "-" * longest_word
-
-        total_size: float = len(altered_var) / 2
-
-        for challenge in challenge_list:
-            temp_altered: str = altered_var
-            size: int = len(challenge)
-            position: float = size / 2
-
-            start_pos: int = int(total_size) - int(position)
-            temp_altered = (
-                temp_altered[:start_pos] + challenge + temp_altered[start_pos + size :]
-            )
-            altered_challenge_list.append(temp_altered)
+        altered_challenge_list: list = [
+            challenge.center(longest_word, "-") for challenge in challenge_list
+        ]
 
         USER_CONFIGS[user_id].challenge_list = altered_challenge_list
         await ctx.send(f"All players set: {USER_CONFIGS[user_id].challenge_list}")
