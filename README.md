@@ -1,5 +1,10 @@
 # Bingo-Run
 
+![Python](https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white)
+![discord.py](https://img.shields.io/badge/Library-discord.py-5865F2?logo=discord&logoColor=white)
+![asyncio](https://img.shields.io/badge/Async-asyncio-0D9488?logo=python&logoColor=white)
+![dotenv](https://img.shields.io/badge/Config-.env-ECD53F?logoColor=black)
+
 A Discord bot that generates interactive bingo boards for multiplayer challenge runs. Players configure a custom list of challenges, set a board size, and assign teammates — the bot then posts an interactive button grid in the server channel where each player can mark off challenges in their own color.
 
 > This project was built to practice Python while learning the Discord API (discord.py).
